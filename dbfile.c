@@ -18,11 +18,35 @@ static void cpy(char *d, const char *s, int n)
     d[n - 1] = 0;
 }
 
+/*
+ * Returns the next |-separated field of a line and moves *rest past it;
+ * NULL when the line has no more fields. Unlike strtok, an empty field is
+ * returned as "" and not skipped. Skipping it moved every later field one
+ * place to the left (issue #10).
+ */
+static char *next_field(char **rest)
+{
+    char *field = *rest;
+    char *bar;
+
+    if (field == NULL)
+        return NULL;
+    bar = strchr(field, '|');
+    if (bar) {
+        *bar = 0;
+        *rest = bar + 1;
+    } else {
+        *rest = NULL;
+    }
+    return field;
+}
+
 static void load_stock(void)
 {
     FILE *f;
     char line[512];
     char *t;
+    char *rest;
     VEHICLE *v;
 
     nveh = 0;
@@ -34,25 +58,26 @@ static void load_stock(void)
         if (line[0] == 0 || line[0] == '#')
             continue;
         v = &veh[nveh];
-        t = strtok(line, "|");
+        rest = line;
+        t = next_field(&rest);
         if (!t)
             continue;
         v->id = atoi(t);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         cpy(v->plate, t, sizeof v->plate);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         cpy(v->make, t, sizeof v->make);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         cpy(v->model, t, sizeof v->model);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         v->year = t ? atoi(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         v->mileage = t ? atol(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         v->cost = t ? atof(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         v->price = t ? atof(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         v->status = t ? atoi(t) : 0;
         nveh++;
     }
@@ -64,6 +89,7 @@ static void load_customers(void)
     FILE *f;
     char line[512];
     char *t;
+    char *rest;
     CUSTOMER *c;
 
     ncust = 0;
@@ -75,18 +101,19 @@ static void load_customers(void)
         if (line[0] == 0 || line[0] == '#')
             continue;
         c = &cust[ncust];
-        t = strtok(line, "|");
+        rest = line;
+        t = next_field(&rest);
         if (!t)
             continue;
         c->id = atoi(t);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         cpy(c->name, t, sizeof c->name);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         cpy(c->phone, t, sizeof c->phone);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         cpy(c->email, t, sizeof c->email);
-        t = strtok(NULL, "|");
-        c->type = t ? t[0] : 'R';
+        t = next_field(&rest);
+        c->type = (t && t[0]) ? t[0] : 'R';
         ncust++;
     }
     fclose(f);
@@ -97,6 +124,7 @@ static void load_invoices(void)
     FILE *f;
     char line[512];
     char *t;
+    char *rest;
     INVOICE *i;
 
     ninv = 0;
@@ -108,29 +136,30 @@ static void load_invoices(void)
         if (line[0] == 0 || line[0] == '#')
             continue;
         i = &inv[ninv];
-        t = strtok(line, "|");
+        rest = line;
+        t = next_field(&rest);
         if (!t)
             continue;
         i->no = atoi(t);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         cpy(i->date, t, sizeof i->date);
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->veh_id = t ? atoi(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->cust_id = t ? atoi(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->list = t ? atof(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->disc = t ? atof(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->net = t ? atof(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->vat = t ? atof(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->fees = t ? atof(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->tradein = t ? atof(t) : 0;
-        t = strtok(NULL, "|");
+        t = next_field(&rest);
         i->total = t ? atof(t) : 0;
         ninv++;
     }

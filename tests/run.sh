@@ -50,6 +50,8 @@ invoice_arithmetic() {
 run_session() {
     work=$(mktemp -d)
     cp -r tests/fixtures/data "$work/data"
+    # A session may replace data files with its own: tests/sessions/NAME.data/
+    if [ -d "${1%.in}.data" ]; then cp -r "${1%.in}.data/." "$work/data/"; fi
     awk -v d="$work" '
         BEGIN { n = 1 }
         $0 == "@restart" { n++; next }
