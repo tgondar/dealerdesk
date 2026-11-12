@@ -24,7 +24,7 @@ Everything below can be checked from a clone: `make test`, `make test-asan`, `ma
 
 I used Claude Code. I made the decisions; it did the reading, writing and running.
 
-**In the repository:** `CLAUDE.md`, the test scripts and two workflows. The guards are mechanical, not advisory: `make record` refuses to run with uncommitted source, so an agent cannot re-record a baseline to turn a failure green; `make test-mutants` applies 18 deliberate mistakes and fails if the tests miss one.
+**In the repository:** `CLAUDE.md` (`AGENTS.md` points other tools to it), the test scripts and two workflows. The guards are mechanical, not advisory: `make record` refuses to run with uncommitted source, so an agent cannot re-record a baseline to turn a failure green; `make test-mutants` applies 18 deliberate mistakes and fails if the tests miss one.
 
 **Not in the repository:** my own Claude Code configuration, which I share with unrelated projects. My standing instructions make the agent log every decision it takes without asking me, and separate what it ran from what it only read. From the `agent-skills` plugin I used these commands:
 
