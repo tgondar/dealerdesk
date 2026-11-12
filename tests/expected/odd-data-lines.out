@@ -29,7 +29,7 @@
   -----------------------------------------------------------------------------------
   2001  Sarah Whitfield            07700 900412   s.whitfield@example.com      Retail
   2002  Marlow Motors Ltd          01632 960118   buying@marlowmotors.example  Trade
-  2003  Both Empty                 T                                           Retail
+  2003  Both Empty                                                             Trade
   2004  No Type At End             07700 900004   notype@example.com           Retail
   2005  Short Line                                                             Retail
   2006  Trailing Bar               07700 900006   bar@example.com              Trade
@@ -84,16 +84,17 @@
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
   QUOTATION (valid 7 days)
   ----------------------------------------------
-  Customer : Both Empty (Retail)
+  Customer : Both Empty (Trade)
   Vehicle  : yf20 hbn Vauxhall Corsa 1.2 SE
   ----------------------------------------------
   List price                   10995.00
-  Net price                    10995.00
+  Trade discount               -1099.50
+  Net price                     9895.50
   Delivery                       150.00
-  VAT 20%                       2229.00
+  VAT 20%                       2009.10
   Registration fee                55.00
   ==============================================
-  TOTAL                        13429.00
+  TOTAL                        12109.60
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Main Menu
@@ -203,9 +204,9 @@
   -----------------------------------------------------------------------------------
   2001  Sarah Whitfield            07700 900412   s.whitfield@example.com      Retail
   2002  Marlow Motors Ltd          01632 960118   buying@marlowmotors.example  Trade
-  2003  Both Empty                 T              R                            Retail
+  2003  Both Empty                                                             Trade
   2004  No Type At End             07700 900004   notype@example.com           Retail
-  2005  Short Line                 R                                           Retail
+  2005  Short Line                                                             Retail
   2006  Trailing Bar               07700 900006   bar@example.com              Trade
   2007  Extra Fields               07700 900007   extra@example.com            Trade
   2008  Greenway Taxis             01632 960702   fleet@greenwaytaxis.example  Retail
@@ -242,7 +243,7 @@
 ### data/customers.dat
 2001|Sarah Whitfield|07700 900412|s.whitfield@example.com|R
 2002|Marlow Motors Ltd|01632 960118|buying@marlowmotors.example|T
-2003|Both Empty|T||R
+2003|Both Empty|||T
 2004|No Type At End|07700 900004|notype@example.com|R
 2005|Short Line|||R
 2006|Trailing Bar|07700 900006|bar@example.com|T

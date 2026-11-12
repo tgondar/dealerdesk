@@ -155,8 +155,8 @@
   1010  hn69 aab   Renault      Clio 1.0 TCe Iconic    2019    33020    9750.00  IN STOCK
   1011  PO21 MMV   Hyundai      Tucson 1.6 T-GDi SE    2021    18760   22995.00  IN STOCK
   1012  EF66 TRX   Mercedes-Benz C220d AMG Line         2016    88400   13495.00  SOLD
-  1013  EM12 PTY   Model Only   2020                   1000     5000       0.00  IN STOCK
-  1014  NO12 MDL   Tesla        2021                   2000    20000       0.00  IN STOCK
+  1013  EM12 PTY                Model Only             2020     1000    7000.00  IN STOCK
+  1014  NO12 MDL   Tesla                               2021     2000   25000.00  IN STOCK
 
   14 vehicle(s)
 
@@ -192,15 +192,15 @@
   QUOTATION (valid 7 days)
   ----------------------------------------------
   Customer : Sarah Whitfield (Retail)
-  Vehicle  : EM12 PTY Model Only 2020
+  Vehicle  : EM12 PTY  Model Only
   ----------------------------------------------
-  List price                       0.00
-  Net price                        0.00
+  List price                    7000.00
+  Net price                     7000.00
   Delivery                       150.00
-  VAT 20%                         30.00
+  VAT 20%                       1430.00
   Registration fee                55.00
   ==============================================
-  TOTAL                          235.00
+  TOTAL                         8635.00
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Main Menu
@@ -222,15 +222,15 @@
   QUOTATION (valid 7 days)
   ----------------------------------------------
   Customer : Sarah Whitfield (Retail)
-  Vehicle  : NO12 MDL Tesla 2021
+  Vehicle  : NO12 MDL Tesla 
   ----------------------------------------------
-  List price                       0.00
-  Net price                        0.00
+  List price                   25000.00
+  Net price                    25000.00
   Delivery                       150.00
-  VAT 20%                         30.00
+  VAT 20%                       5030.00
   Registration fee                55.00
   ==============================================
-  TOTAL                          235.00
+  TOTAL                        30235.00
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Main Menu
