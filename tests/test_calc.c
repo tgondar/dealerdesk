@@ -38,7 +38,19 @@ static const CASE cases[] = {
     {"half a penny rounds up",              10995.00, 'R',  7.5,    0.00,    0.00,  7.5,  824.63, 10170.37, 2064.07, 12439.44},
     {"fees are never discounted",            1000.00, 'T', 15.0,    0.00,  100.00, 15.0,  135.00,   765.00,  183.00,  1153.00},
     {"unknown type gets no trade discount", 10995.00, 'X',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00},
-    {"type is case sensitive",              10995.00, 't',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00}
+    {"type is case sensitive",              10995.00, 't',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00},
+
+    /* TICKET-142: fleet customers (type F) get 4% off the list price. The
+     * salesman % then applies to what remains, as it does after the trade
+     * discount, and its 15% cap is not used up by the fleet discount.
+     * Figures worked out by hand before the code was written. */
+    {"fleet: 4% off the list price",        10995.00, 'F',  0.0,    0.00,    0.00,  0.0,    0.00, 10555.20, 2141.04, 12901.24},
+    {"fleet: salesman % applies after",     10995.00, 'F',  5.0,    0.00,    0.00,  5.0,  527.76, 10027.44, 2035.49, 12267.93},
+    {"fleet: salesman cap stays at 15",     10995.00, 'F', 20.0,    0.00,    0.00, 15.0, 1583.28,  8971.92, 1824.38, 11001.30},
+    {"fleet: with % and trade-in",          10995.00, 'F',  7.5, 1500.00,    0.00,  7.5,  791.64,  9763.56, 1982.71, 10451.27},
+    {"fleet: fees are not discounted",       1000.00, 'F',  0.0,    0.00,    0.00,  0.0,    0.00,   960.00,  222.00,  1387.00},
+    {"fleet: discount rounds to the penny", 12345.67, 'F',  0.0,    0.00,    0.00,  0.0,    0.00, 11851.84, 2400.37, 14457.21},
+    {"fleet: type is case sensitive",       10995.00, 'f',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00}
 };
 
 static int failures = 0;
