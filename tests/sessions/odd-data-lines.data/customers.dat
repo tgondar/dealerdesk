@@ -1,0 +1,10 @@
+2001|Sarah Whitfield|07700 900412|s.whitfield@example.com|R
+2002|Marlow Motors Ltd|01632 960118|buying@marlowmotors.example|T
+2003|Both Empty|||T
+2004|No Type At End|07700 900004|notype@example.com|
+2005|Short Line
+2006|Trailing Bar|07700 900006|bar@example.com|T|
+
+# a comment line
+2007|Extra Fields|07700 900007|extra@example.com|T|more|fields
+2008|Greenway Taxis|01632 960702|fleet@greenwaytaxis.example|R
