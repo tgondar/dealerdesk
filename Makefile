@@ -33,6 +33,10 @@ test: dealerdesk build/test_calc
 test-asan: build/dealerdesk-asan
 	BIN=build/dealerdesk-asan bash tests/run.sh
 
+# Data written by this version must survive putting release 2.3 back.
+test-rollback: dealerdesk
+	BIN=./dealerdesk bash tests/rollback.sh
+
 # Rewrites tests/expected. Read CLAUDE.md before using it.
 record: dealerdesk
 	BIN=./dealerdesk bash tests/run.sh record
@@ -40,4 +44,4 @@ record: dealerdesk
 clean:
 	rm -rf dealerdesk build
 
-.PHONY: all test test-asan record clean
+.PHONY: all test test-asan test-rollback record clean

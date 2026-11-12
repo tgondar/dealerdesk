@@ -17,6 +17,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0   # the rollback check builds release 2.3 from history
 
       - name: Build, warnings are errors
         run: make CFLAGS="-std=c89 -pedantic -Wall -Wextra -Werror"
@@ -26,6 +28,9 @@ jobs:
 
       - name: Recorded sessions under ASan and UBSan
         run: make test-asan
+
+      - name: Data survives a rollback to release 2.3
+        run: make test-rollback
 
       - name: README Quick Start build behaves the same
         run: |
