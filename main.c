@@ -237,6 +237,23 @@ static void list_customers(void)
     pause_enter();
 }
 
+/*
+ * One prompt, so adding a customer takes the same keys as before TICKET-142:
+ * Y is trade and anything else is retail, as always; F is the new answer.
+ * A customer is retail, trade or fleet, never two at once.
+ */
+static char read_cust_type(void)
+{
+    char b[8];
+
+    read_line("  Trade customer (Y/N, or F for fleet)? ", b, sizeof b);
+    if (b[0] == 'Y' || b[0] == 'y')
+        return 'T';
+    if (b[0] == 'F' || b[0] == 'f')
+        return 'F';
+    return 'R';
+}
+
 static void add_customer(void)
 {
     CUSTOMER c;
@@ -251,10 +268,7 @@ static void add_customer(void)
     read_line("  Name   : ", c.name, sizeof c.name);
     read_line("  Phone  : ", c.phone, sizeof c.phone);
     read_line("  Email  : ", c.email, sizeof c.email);
-    c.type = confirm("  Trade customer (Y/N)? ") ? 'T' : 'R';
-    /* a customer is retail, trade or fleet, never two at once */
-    if (c.type == 'R' && confirm("  Fleet customer (Y/N)? "))
-        c.type = 'F';
+    c.type = read_cust_type();
 
     if (c.name[0] == 0) {
         printf("\n  Name is required.\n");
