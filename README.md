@@ -33,6 +33,7 @@ BUILD AND TEST
     make test-asan       the same sessions, stopping on memory errors
     make test-rollback   checks that release 2.3 still reads the data
     make test-speed      checks it is not slower than release 2.3
+    make test-mutants    checks the tests catch 18 deliberate mistakes
 
 "make" and the Quick Start command build the same program from main.c,
 dbfile.c, screen.c and calc.c.
