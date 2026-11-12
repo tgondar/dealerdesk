@@ -32,6 +32,7 @@ BUILD AND TEST
     make test            pricing tests, then every recorded session
     make test-asan       the same sessions, stopping on memory errors
     make test-rollback   checks that release 2.3 still reads the data
+    make test-speed      checks it is not slower than release 2.3
 
 "make" and the Quick Start command build the same program from main.c,
 dbfile.c, screen.c and calc.c.

@@ -1,6 +1,6 @@
 # NOTES
 
-Everything below can be checked from a clone: `make test`, `make test-asan`, `make test-rollback`, `make test-mutants`. The backlog is the [issue list](https://github.com/tgondar/dealerdesk/issues); the published result is [release 2.4](https://github.com/tgondar/dealerdesk/releases/tag/v2.4).
+Everything below can be checked from a clone: `make test`, `make test-asan`, `make test-rollback`, `make test-speed`, `make test-mutants`. The backlog is the [issue list](https://github.com/tgondar/dealerdesk/issues); the published result is [release 2.4](https://github.com/tgondar/dealerdesk/releases/tag/v2.4).
 
 ## What I changed, in order, and why
 
@@ -14,7 +14,7 @@ Everything below can be checked from a clone: `make test`, `make test-asan`, `ma
 
 **5. A defect the feature made worse (#10).** A customer saved without a phone or email reloaded with its fields shifted, so a fleet customer silently lost the discount. A vehicle saved without a make reloaded priced 0.00. Fixed in its own pull request, after recording the broken behaviour.
 
-**6. Release by tag.** `v2.4` builds, runs every check on that exact binary, and publishes it with a checksum. `make test-rollback` builds release 2.3 from history and proves it still reads 2.4's data, because the documented rollback is "copy the old binary back".
+**6. Release by tag.** `v2.4` builds, runs every check on that exact binary, and publishes it with a checksum. `make test-rollback` builds release 2.3 from history and proves it still reads 2.4's data, because the documented rollback is "copy the old binary back". `make test-speed` times each build against 2.3 with the data files nearly full, and fails one that takes more than twice as long.
 
 **7. README corrected**, last, once tests pinned every rule it states.
 
@@ -33,7 +33,7 @@ I used Claude Code. I made the decisions; it did the reading, writing and runnin
 
 - **A design that broke the ticket.** It added a second prompt, "Fleet customer (Y/N)?", and reasoned that ENTER meaning No kept old habits safe. It had also edited the keystroke files to fit. The review agent replayed the original keystrokes: one customer saved instead of two. I chose a single prompt that also accepts `F`; the keystroke files are identical to `master` again.
 - **Tests that could not fail.** Unit tests accepted anything within half a penny, so an unrounded discount passed; three rollback checks were true whatever the program did. The reviewer found both by deleting the rounding and watching everything stay green. That is why `tests/mutants.sh` now exists.
-- **A status read from the wrong place, twice.** A probe printed `exit=0` under a compiler error, then again under 21 failed checks. Caught because the status contradicted the output above it.
+- **It skipped something I had asked for.** At the start I asked to measure the system before and after. It timed one session once, decided speed did not matter for a terminal program, and moved on. I noticed at the end. Its first speed check then took the fastest of seven runs and once reported 0 ms, because WSL adjusts the clock mid-run. It now takes the median.
 - **It tried to merge the feature itself** after I said I wanted less waiting. The permission system refused, and it did not look for a way round. I merge.
 
 ## Assumptions

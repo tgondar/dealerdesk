@@ -23,8 +23,8 @@ own machine any more.
    The Release workflow then
    - refuses the tag if it does not match DD_VERSION, or is not on master
    - builds the program with warnings as errors
-   - runs the pricing tests, the recorded sessions and the rollback check
-     on that exact binary
+   - runs the pricing tests, the recorded sessions, the rollback check and
+     the speed comparison with release 2.3 on that exact binary
    - publishes dealerdesk-<version>-linux-x86_64.tar.gz with its checksum
      at https://github.com/tgondar/dealerdesk/releases
 
