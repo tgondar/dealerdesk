@@ -1,0 +1,50 @@
+DEALERDESK 2.4 - WHAT IS NEW FOR THE SHOWROOMS
+==============================================
+
+This is the text for the email to the showrooms.
+
+1. FLEET CUSTOMERS
+
+   A customer can now be a fleet customer. Fleet customers get 4% off the
+   list price automatically. Delivery and registration are not discounted.
+   The quote and the invoice preview show it on its own line:
+
+       Fleet discount                -439.80
+
+   You no longer need the salesman discount for this. It stays free for
+   negotiating, with the same limit as before.
+
+   To make an existing customer a fleet customer (Greenway Taxis, for
+   example):
+       Customers > 4. Fleet customer on / off > customer ID > Y
+
+   When adding a new customer, the question is now
+       Trade customer (Y/N, or F for fleet)?
+   Y and N do what they always did. Type F for a fleet customer.
+
+   A customer is retail, trade or fleet. A trade customer cannot also be a
+   fleet customer.
+
+2. CUSTOMERS AND VEHICLES SAVED WITH AN EMPTY BOX
+
+   Until now, a customer saved without a phone number or an email, or a
+   vehicle saved without a make or a model, came back wrong the next time
+   the program was started: a trade customer showed as Retail and lost the
+   trade discount, and a vehicle showed a price of 0.00.
+
+   This is fixed. Some of these customers and vehicles will show their
+   correct details again after this update. Others were saved again while
+   they were wrong and cannot be recognised by the program.
+
+   PLEASE CHECK after updating:
+   - Customers > 1. List customers: any trade customer shown as Retail,
+     or an email shown in the PHONE column
+   - Stock > 2. List all vehicles: any vehicle with a price of 0.00
+
+3. NOTHING ELSE CHANGES
+
+   Stock, quotes, sales and invoices for retail and trade customers work
+   exactly as in 2.3, to the penny. Your data files are used as they are.
+
+If something is wrong after the update, tell the person who installed it.
+The previous version can be put back and your data stays valid.
