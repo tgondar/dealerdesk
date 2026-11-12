@@ -1,6 +1,6 @@
 ### run 1
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -12,7 +12,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -22,14 +22,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Add Customer
+  DEALERDESK v2.4                                 Add Customer
 ==============================================================
 
   Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2009 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -39,14 +39,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Add Customer
+  DEALERDESK v2.4                                 Add Customer
 ==============================================================
 
   Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2010 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -56,14 +56,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Add Customer
+  DEALERDESK v2.4                                 Add Customer
 ==============================================================
 
   Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2011 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -73,14 +73,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Add Customer
+  DEALERDESK v2.4                                 Add Customer
 ==============================================================
 
   Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2012 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -90,7 +90,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   ID    NAME                       PHONE          EMAIL                        TYPE
@@ -111,7 +111,7 @@
   12 customer(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -121,7 +121,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -133,7 +133,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -145,14 +145,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                  Add Vehicle
+  DEALERDESK v2.4                                  Add Vehicle
 ==============================================================
 
   Plate      :   Make       :   Model      :   Year       :   Mileage    :   Cost price :   List price : 
   Vehicle 1013 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -164,7 +164,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 All Vehicles
+  DEALERDESK v2.4                                 All Vehicles
 ==============================================================
 
   ID    PLATE      MAKE         MODEL                  YEAR    MILES      PRICE  STATUS
@@ -186,7 +186,7 @@
   13 vehicle(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -198,7 +198,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -210,7 +210,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -229,7 +229,7 @@
   TOTAL                        13196.08
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -246,7 +246,7 @@
 ### exit status: 0
 ### run 2
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -258,7 +258,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -268,7 +268,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   ID    NAME                       PHONE          EMAIL                        TYPE
@@ -289,7 +289,7 @@
   12 customer(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -299,7 +299,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -311,7 +311,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -323,7 +323,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 All Vehicles
+  DEALERDESK v2.4                                 All Vehicles
 ==============================================================
 
   ID    PLATE      MAKE         MODEL                  YEAR    MILES      PRICE  STATUS
@@ -345,7 +345,7 @@
   13 vehicle(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -357,7 +357,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock

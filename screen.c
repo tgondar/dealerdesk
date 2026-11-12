@@ -15,7 +15,7 @@ void header(const char *title)
 {
     cls();
     printf("==============================================================\n");
-    printf("  DEALERDESK v2.3 %44s\n", title);
+    printf("  DEALERDESK v" DD_VERSION " %44s\n", title);
     printf("==============================================================\n\n");
 }
 

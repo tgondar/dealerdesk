@@ -1,6 +1,6 @@
 ### run 1
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -12,7 +12,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -22,14 +22,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Add Customer
+  DEALERDESK v2.4                                 Add Customer
 ==============================================================
 
   Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2009 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -39,7 +39,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -56,7 +56,7 @@
 ### exit status: 0
 ### run 2
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -68,7 +68,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -78,7 +78,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   ID    NAME                       PHONE          EMAIL                        TYPE
@@ -96,7 +96,7 @@
   9 customer(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -106,7 +106,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -118,7 +118,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -137,7 +137,7 @@
   TOTAL                        12901.24
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock

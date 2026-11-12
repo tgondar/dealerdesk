@@ -15,7 +15,7 @@ DealerDesk is a menu-driven terminal program in C. Car dealerships use it every 
 | Build | `main.c dbfile.c screen.c report.c` | `report.c` does not exist | #2 |
 | Data folder | `C:\DEALERDESK\DATA` | `./data`, relative to where it is started | #3 |
 | Menu | has "6. Reports" | removed | #4 |
-| Version | 2.1 | 2.3 | #1 |
+| Version | README says 2.1 | `DD_VERSION` in `screen.h`, printed on every screen | #1 |
 
 Pricing, as `calc_quote()` implements it:
 
@@ -46,6 +46,10 @@ Run these on Linux, macOS or WSL, from the repository root.
 | `make clean` | removes build output |
 
 The README Quick Start command, `gcc -o dealerdesk *.c -lm`, must keep working. Do not add `.c` files to the repository root unless they belong to the program; tests live in `tests/`.
+
+## Releases
+
+`RELEASE.txt` is the procedure and it is accurate. In short: the version lives in `DD_VERSION` in `screen.h`; a pushed tag `vX.Y` that matches it makes the Release workflow build, run every check on that binary and publish it. Never move or reuse a tag. `CHANGES.txt` is written for showroom staff, not for developers: no file names, no issue numbers.
 
 ## How the tests work
 

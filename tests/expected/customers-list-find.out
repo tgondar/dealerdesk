@@ -1,6 +1,6 @@
 ### run 1
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -12,7 +12,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -22,7 +22,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   ID    NAME                       PHONE          EMAIL                        TYPE
@@ -39,7 +39,7 @@
   8 customer(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -49,7 +49,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                Find Customer
+  DEALERDESK v2.4                                Find Customer
 ==============================================================
 
   Name contains : 
@@ -58,7 +58,7 @@
   1 match(es)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -68,7 +68,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                Find Customer
+  DEALERDESK v2.4                                Find Customer
 ==============================================================
 
   Name contains : 
@@ -76,7 +76,7 @@
   0 match(es)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -86,7 +86,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                Find Customer
+  DEALERDESK v2.4                                Find Customer
 ==============================================================
 
   Name contains : 
@@ -95,7 +95,7 @@
   1 match(es)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -105,7 +105,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                Find Customer
+  DEALERDESK v2.4                                Find Customer
 ==============================================================
 
   Name contains : 
@@ -121,7 +121,7 @@
   8 match(es)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -131,7 +131,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock

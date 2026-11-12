@@ -1,12 +1,51 @@
 HOW TO RELEASE DEALERDESK
 =========================
 
-1. Build on your machine (see README)
-2. Test it a bit: add a car, do a quote, sell a car, check the invoice looks right.
-   PUT THE DATA FILES BACK AFTERWARDS!!
-3. On \\fileserver01\apps\dealerdesk\ rename dealerdesk to dealerdesk.old
-4. Copy the new dealerdesk binary there
-5. Email the showrooms that a new version is out
-6. If something breaks, copy dealerdesk.old back
+A release is built and checked by GitHub Actions. Nobody builds it on their
+own machine any more.
 
-Last release: 2.3 (2021-04-08)  - P.
+1. Get the change onto master through a pull request. CI must be green.
+   (CI builds on Linux and macOS and runs all the tests on every push.)
+
+2. In one pull request, for the release itself:
+   - set DD_VERSION in screen.h to the new version (it is on every screen)
+   - update the header line in tests/expected/*.out to match
+   - write CHANGES.txt: what is new, in words for the showrooms
+   - update "Last release" at the bottom of this file
+
+3. Tag master and push the tag:
+
+       git checkout master
+       git pull
+       git tag v2.4
+       git push origin v2.4
+
+   The Release workflow then
+   - refuses the tag if it does not match DD_VERSION, or is not on master
+   - builds the program with warnings as errors
+   - runs the pricing tests, the recorded sessions and the rollback check
+     on that exact binary
+   - publishes dealerdesk-<version>-linux-x86_64.tar.gz with its checksum
+     at https://github.com/tgondar/dealerdesk/releases
+
+   If any step fails, nothing is published. Fix it on master and tag the
+   next version; do not move a tag.
+
+4. BY HAND, because the workflow has no access to the file server:
+   - download the release and check it: sha256sum -c <file>.sha256
+   - on \\fileserver01\apps\dealerdesk\ rename dealerdesk to dealerdesk.old
+   - copy the new dealerdesk binary there
+   - email the showrooms: the text is CHANGES.txt
+
+5. If something breaks, copy dealerdesk.old back.
+   Data written by the new version still works in the old one. This is
+   checked on every push ("make test-rollback").
+
+NOT COVERED: the published binary is for Linux. Windows releases were built
+with the Borland compiler on the old build PC, and the workflow cannot do
+that. A Windows build still has to be made by hand from the tagged commit.
+
+To test a change before any of this: make test
+
+Last release: 2.4 (2026-11-12)
+Previous:     2.3 (2021-04-08)  - P.

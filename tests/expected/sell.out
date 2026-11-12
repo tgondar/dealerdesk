@@ -1,6 +1,6 @@
 ### run 1
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -12,7 +12,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Sell Vehicle
+  DEALERDESK v2.4                                 Sell Vehicle
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -34,7 +34,7 @@
   Invoice 50233 created.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -46,7 +46,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Sell Vehicle
+  DEALERDESK v2.4                                 Sell Vehicle
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -69,7 +69,7 @@
   Sale cancelled.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -81,7 +81,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Sell Vehicle
+  DEALERDESK v2.4                                 Sell Vehicle
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -105,7 +105,7 @@
   Invoice 50234 created.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -117,7 +117,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Sell Vehicle
+  DEALERDESK v2.4                                 Sell Vehicle
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -139,7 +139,7 @@
   Invoice 50235 created.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -151,14 +151,14 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Sell Vehicle
+  DEALERDESK v2.4                                 Sell Vehicle
 ==============================================================
 
   Vehicle ID  : 
   Vehicle is already sold.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -170,14 +170,14 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Sell Vehicle
+  DEALERDESK v2.4                                 Sell Vehicle
 ==============================================================
 
   Vehicle ID  : 
   Vehicle not found.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -189,7 +189,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -197,7 +197,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   NO     DATE       VEH    CUSTOMER                          TOTAL
@@ -212,7 +212,7 @@
   6 invoice(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -220,7 +220,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 View Invoice
+  DEALERDESK v2.4                                 View Invoice
 ==============================================================
 
   Invoice no : 
@@ -238,7 +238,7 @@
   TOTAL                        12769.30
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -246,7 +246,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 View Invoice
+  DEALERDESK v2.4                                 View Invoice
 ==============================================================
 
   Invoice no : 
@@ -265,7 +265,7 @@
   TOTAL                        14782.14
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -273,7 +273,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 View Invoice
+  DEALERDESK v2.4                                 View Invoice
 ==============================================================
 
   Invoice no : 
@@ -291,7 +291,7 @@
   TOTAL                        18727.00
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -299,7 +299,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -311,7 +311,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -323,7 +323,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 All Vehicles
+  DEALERDESK v2.4                                 All Vehicles
 ==============================================================
 
   ID    PLATE      MAKE         MODEL                  YEAR    MILES      PRICE  STATUS
@@ -344,7 +344,7 @@
   12 vehicle(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -356,7 +356,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -373,7 +373,7 @@
 ### exit status: 0
 ### run 2
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -385,7 +385,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -393,7 +393,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   NO     DATE       VEH    CUSTOMER                          TOTAL
@@ -408,7 +408,7 @@
   6 invoice(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -416,7 +416,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 View Invoice
+  DEALERDESK v2.4                                 View Invoice
 ==============================================================
 
   Invoice no : 
@@ -434,7 +434,7 @@
   TOTAL                        12769.30
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -442,7 +442,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 View Invoice
+  DEALERDESK v2.4                                 View Invoice
 ==============================================================
 
   Invoice no : 
@@ -461,7 +461,7 @@
   TOTAL                        14782.14
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -469,7 +469,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 View Invoice
+  DEALERDESK v2.4                                 View Invoice
 ==============================================================
 
   Invoice no : 
@@ -487,7 +487,7 @@
   TOTAL                        18727.00
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -495,7 +495,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -507,14 +507,14 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  : 
   Vehicle is already sold.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock

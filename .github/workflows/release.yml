@@ -1,0 +1,57 @@
+name: Release
+
+# Pushing a version tag (v2.4) builds the program, runs every check on that
+# exact binary and publishes it. Nothing is published if any step fails.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write   # to create the GitHub release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0   # the rollback check builds release 2.3 from history
+
+      - name: The tag matches the version in the source
+        run: |
+          version=$(sed -n 's/^#define DD_VERSION "\(.*\)"$/\1/p' screen.h)
+          echo "source says $version, tag is $GITHUB_REF_NAME"
+          test -n "$version" && test "v$version" = "$GITHUB_REF_NAME"
+
+      - name: The tagged commit is on master
+        run: git merge-base --is-ancestor "$GITHUB_SHA" origin/master
+
+      - name: Build the release binary, warnings are errors
+        run: make CFLAGS="-std=c89 -pedantic -Wall -Wextra -Werror" LDFLAGS=-static
+
+      - name: Pricing unit tests and recorded sessions, on the release binary
+        run: make test
+
+      - name: Data survives a rollback to release 2.3, on the release binary
+        run: make test-rollback
+
+      - name: Recorded sessions under ASan and UBSan
+        run: make test-asan
+
+      - name: Package
+        run: |
+          name=dealerdesk-${GITHUB_REF_NAME#v}-linux-x86_64
+          mkdir "$name"
+          cp dealerdesk RELEASE.txt CHANGES.txt "$name"/
+          tar -czf "$name.tar.gz" "$name"
+          sha256sum "$name.tar.gz" > "$name.tar.gz.sha256"
+          cat "$name.tar.gz.sha256"
+
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dealerdesk-*.tar.gz dealerdesk-*.tar.gz.sha256 \
+            --verify-tag \
+            --title "DealerDesk ${GITHUB_REF_NAME#v}" \
+            --notes-file CHANGES.txt
