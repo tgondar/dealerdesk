@@ -10,15 +10,15 @@ Everything below can be checked from a clone: `make test`, `make test-asan`, `ma
 
 **3. CI on Linux and macOS**, with a sanitizer build.
 
-**4. TICKET-142, test first.** Two commits are red on purpose and say `(failing)`. Fleet is a third customer type letter, so no file format changes.
+**4. TICKET-142, test first.** Three commits are red on purpose and say `(failing)`; each is followed by the one that turns it green. Fleet is a third customer type letter, so no file format changes.
 
 **5. A defect the feature made worse (#10).** A customer saved without a phone or email reloaded with its fields shifted, so a fleet customer silently lost the discount. Fixed in its own pull request, after recording the broken behaviour.
 
-**6. Release by tag.** `v2.4` builds, runs every check on that exact binary and publishes it with a checksum. Two checks build release 2.3 from history: `make test-rollback` proves 2.3 still reads 2.4's data, since the documented rollback is "copy the old binary back", and `make test-speed` fails a build more than twice as slow.
+**6. Release by tag.** `v2.4` builds, runs every check on that exact binary and publishes it with a checksum. Two checks build release 2.3 from history: `make test-rollback` proves 2.3 still reads 2.4's data, since the documented rollback is "copy the old binary back", and `make test-speed`, added after 2.4, fails a build more than twice as slow.
 
 **7. README corrected**, last, once tests pinned every rule it states.
 
-**Left alone on purpose:** 10 open issues that staff would notice or that need a business answer (input validation, non-atomic saves, the Help screen's wrong text, a one-penny rounding case reproduced on 2.3).
+**Left alone on purpose:** 10 open issues that staff would notice or that need a business answer (for example input validation, non-atomic saves and the Help screen's wrong text).
 
 ## My agent setup
 
@@ -26,13 +26,13 @@ I used Claude Code. I made the decisions; it did the reading, writing and runnin
 
 **In the repository:** `CLAUDE.md`, the test scripts and two workflows. The guards are mechanical, not advisory: `make record` refuses to run with uncommitted source, so an agent cannot re-record a baseline to turn a failure green; `make test-mutants` applies 18 deliberate mistakes and fails if the tests miss one.
 
-**Not in the repository:** my own Claude Code configuration, which I share with unrelated projects. From it I used three skills from the `agent-skills` plugin: `idea-refine` to analyse before any change, `test-driven-development` for the ticket, and a `code-reviewer` agent that read the feature diff with the ticket and the house rules but none of my conclusions. My standing instructions make the agent log every decision it takes without asking me, and separate what it ran from what it only read.
+**Not in the repository:** my own Claude Code configuration, which I share with unrelated projects. From it I used two skills and a review agent from the `agent-skills` plugin: `idea-refine` to analyse before any change, `test-driven-development` for the ticket, and a `code-reviewer` agent that read the feature diff with the ticket and the house rules but none of my conclusions. My standing instructions make the agent log every decision it takes without asking me, and separate what it ran from what it only read.
 
-**The prompts that steered the work** (shortened):
+**The prompts that steered the work** (shortened and tidied, not word for word):
 
 | When | What I asked |
 |---|---|
-| Before anything | "Identify the constraints and what needs solving. I want to understand what works today and what will be added, and to measure the system before and after. Before any change, let's discuss." |
+| Before anything | "Identify the constraints and what needs solving. I want to understand what works today and what will be added, and to measure the system before and after, with any SLI/SLO I should check. Before any change, let's discuss." |
 | On the ticket | "Open it with their exact text, then add what I decided as a comment, so it is clear these are my assumptions." |
 | Before any code | "Do we have tests? If not, this is mandatory. Then we run the same tests to confirm no behaviour was lost." |
 | For the feature | "/test-driven-development start the fleet discount" |
@@ -41,8 +41,8 @@ I used Claude Code. I made the decisions; it did the reading, writing and runnin
 ## Where the agent got things wrong
 
 - **A design that broke the ticket.** It added a second prompt, "Fleet customer (Y/N)?", and had edited the keystroke files to fit. The review agent replayed the original keystrokes: one customer saved instead of two. I chose a single prompt that also accepts `F`; the keystroke files are identical to the originals again.
-- **Tests that could not fail.** Unit tests accepted anything within half a penny, so an unrounded discount passed. The reviewer found it by deleting the rounding and watching everything stay green. That is why `tests/mutants.sh` exists.
-- **It skipped something I had asked for.** It timed one session once, decided speed did not matter for a terminal program, and moved on. I noticed after the release. Its first speed check then reported 0 ms once, because WSL adjusts the clock mid-run; it now takes the median of seven runs.
+- **Tests that could not fail.** Unit tests accepted anything within half a penny, so an unrounded discount passed. The reviewer found it by deleting the rounding and watching everything stay green.
+- **It skipped something I had asked for.** It timed one session once, decided speed did not matter for a terminal program, and moved on. I noticed after the release. Its first speed check then reported 0 ms once: 3 of 350 logged timings were nonsense, most likely the clock being adjusted mid-run under WSL. It now takes the median of seven runs.
 
 ## Assumptions
 
@@ -60,4 +60,3 @@ Posted on the ticket (#21) as questions to the requester:
 2. A separate fleet line on saved invoices (#20), extending the rollback check first.
 3. Atomic saves (#12) and input validation (#11), each behind a recorded baseline.
 4. Correct the Help screen once signed off, and make the Windows build reproducible.
-5. A hook that runs `make test` after every agent edit.
