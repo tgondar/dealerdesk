@@ -208,11 +208,20 @@ static void stock_menu(void)
 
 /* -------------------------------------------------------- CUSTOMERS */
 
+/* R = retail, T = trade, F = fleet. Anything else is shown as retail. */
+static const char *type_txt(char t)
+{
+    if (t == 'T')
+        return "Trade";
+    if (t == 'F')
+        return "Fleet";
+    return "Retail";
+}
+
 static void print_cust_row(CUSTOMER *c)
 {
     printf("  %-5d %-26.26s %-14s %-28.28s %s\n",
-           c->id, c->name, c->phone, c->email,
-           c->type == 'T' ? "Trade" : "Retail");
+           c->id, c->name, c->phone, c->email, type_txt(c->type));
 }
 
 static void list_customers(void)
@@ -243,6 +252,9 @@ static void add_customer(void)
     read_line("  Phone  : ", c.phone, sizeof c.phone);
     read_line("  Email  : ", c.email, sizeof c.email);
     c.type = confirm("  Trade customer (Y/N)? ") ? 'T' : 'R';
+    /* a customer is retail, trade or fleet, never two at once */
+    if (c.type == 'R' && confirm("  Fleet customer (Y/N)? "))
+        c.type = 'F';
 
     if (c.name[0] == 0) {
         printf("\n  Name is required.\n");
@@ -275,6 +287,37 @@ static void find_customer(void)
     pause_enter();
 }
 
+/* Turns the fleet discount on or off for an existing customer (TICKET-142). */
+static void fleet_customer(void)
+{
+    CUSTOMER *c;
+    char to;
+
+    header("Fleet Customer");
+    c = find_cust(read_int("  Customer ID : "));
+    if (!c) {
+        printf("\n  Customer not found.\n");
+        pause_enter();
+        return;
+    }
+    if (c->type == 'T') {
+        printf("\n  %s is a trade customer and cannot be a fleet customer.\n", c->name);
+        pause_enter();
+        return;
+    }
+    to = (c->type == 'F') ? 'R' : 'F';
+    printf("  %s is a %s customer.\n", c->name, to == 'F' ? "retail" : "fleet");
+    if (confirm(to == 'F' ? "  Mark as fleet customer (Y/N)? "
+                          : "  Remove fleet discount (Y/N)? ")) {
+        c->type = to;
+        save_customers();
+        printf("\n  Customer %d is now %s.\n", c->id, type_txt(c->type));
+    } else {
+        printf("\n  Customer not changed.\n");
+    }
+    pause_enter();
+}
+
 static void customer_menu(void)
 {
     int opt;
@@ -284,12 +327,14 @@ static void customer_menu(void)
         printf("  1. List customers\n");
         printf("  2. Add customer\n");
         printf("  3. Find customer\n");
+        printf("  4. Fleet customer on / off\n");
         printf("  0. Back\n\n");
         opt = read_int("  Option: ");
         switch (opt) {
         case 1: list_customers(); break;
         case 2: add_customer(); break;
         case 3: find_customer(); break;
+        case 4: fleet_customer(); break;
         case 0: return;
         default:
             printf("  Invalid option\n");
@@ -333,12 +378,14 @@ static void print_quote(const char *title, QUOTE *q, VEHICLE *v, CUSTOMER *c)
 {
     printf("\n  %s\n", title);
     printf("  ----------------------------------------------\n");
-    printf("  Customer : %s (%s)\n", c->name, c->type == 'T' ? "Trade" : "Retail");
+    printf("  Customer : %s (%s)\n", c->name, type_txt(c->type));
     printf("  Vehicle  : %s %s %s\n", v->plate, v->make, v->model);
     printf("  ----------------------------------------------\n");
     printf("  List price               %12.2f\n", q->list);
     if (q->trade_disc > 0)
         printf("  Trade discount           %12.2f\n", -q->trade_disc);
+    if (q->fleet_disc > 0)
+        printf("  Fleet discount           %12.2f\n", -q->fleet_disc);
     if (q->disc > 0)
         printf("  Discount (%4.1f%%)         %12.2f\n", q->disc_pct, -q->disc);
     printf("  Net price                %12.2f\n", q->net);
@@ -397,7 +444,7 @@ static void sell_vehicle(void)
     i->veh_id = v->id;
     i->cust_id = c->id;
     i->list = q.list;
-    i->disc = q.trade_disc + q.disc;
+    i->disc = q.trade_disc + q.fleet_disc + q.disc;
     i->net = q.net;
     i->vat = q.vat;
     i->fees = q.delivery + q.reg_fee;
@@ -498,6 +545,7 @@ static void help_screen(void)
     printf("  DEALERDESK QUICK HELP\n\n");
     printf("  - Plates are converted to upper case automatically.\n");
     printf("  - Trade customers receive a 5%% trade discount.\n");
+    printf("  - Fleet customers receive a 4%% fleet discount.\n");
     printf("  - Salesman discounts above 10%% require a manager PIN.\n");
     printf("  - Quotes are valid for 7 days.\n");
     printf("  - A sold vehicle cannot be reserved or sold again.\n");
