@@ -1,6 +1,6 @@
 ### run 1
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -12,7 +12,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -24,7 +24,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Change Price
+  DEALERDESK v2.4                                 Change Price
 ==============================================================
 
   Vehicle ID :   yf20 hbn Vauxhall Corsa 1.2 SE, current price 10995.00
@@ -32,7 +32,7 @@
   Price updated.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -44,14 +44,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Change Price
+  DEALERDESK v2.4                                 Change Price
 ==============================================================
 
   Vehicle ID : 
   Vehicle not found.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -63,7 +63,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Change Price
+  DEALERDESK v2.4                                 Change Price
 ==============================================================
 
   Vehicle ID :   BD68 KWP Volkswagen Golf 1.5 TSI Life, current price 15995.00
@@ -71,7 +71,7 @@
   Price not changed.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -83,7 +83,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Change Price
+  DEALERDESK v2.4                                 Change Price
 ==============================================================
 
   Vehicle ID :   BD68 KWP Volkswagen Golf 1.5 TSI Life, current price 15995.00
@@ -91,7 +91,7 @@
   Price not changed.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -103,14 +103,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                            Reserve / Release
+  DEALERDESK v2.4                            Reserve / Release
 ==============================================================
 
   Vehicle ID : 
   Vehicle 1002 is now RESERVED.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -122,14 +122,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                            Reserve / Release
+  DEALERDESK v2.4                            Reserve / Release
 ==============================================================
 
   Vehicle ID : 
   Vehicle 1006 is now IN STOCK.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -141,14 +141,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                            Reserve / Release
+  DEALERDESK v2.4                            Reserve / Release
 ==============================================================
 
   Vehicle ID : 
   Vehicle is already sold.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -160,14 +160,14 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                            Reserve / Release
+  DEALERDESK v2.4                            Reserve / Release
 ==============================================================
 
   Vehicle ID : 
   Vehicle not found.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -179,7 +179,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 All Vehicles
+  DEALERDESK v2.4                                 All Vehicles
 ==============================================================
 
   ID    PLATE      MAKE         MODEL                  YEAR    MILES      PRICE  STATUS
@@ -200,7 +200,7 @@
   12 vehicle(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -212,7 +212,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -229,7 +229,7 @@
 ### exit status: 0
 ### run 2
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -241,7 +241,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -253,7 +253,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 All Vehicles
+  DEALERDESK v2.4                                 All Vehicles
 ==============================================================
 
   ID    PLATE      MAKE         MODEL                  YEAR    MILES      PRICE  STATUS
@@ -274,7 +274,7 @@
   12 vehicle(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -286,7 +286,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock

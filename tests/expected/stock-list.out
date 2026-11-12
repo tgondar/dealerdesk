@@ -1,6 +1,6 @@
 ### run 1
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -12,7 +12,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -24,7 +24,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                   Stock List
+  DEALERDESK v2.4                                   Stock List
 ==============================================================
 
   ID    PLATE      MAKE         MODEL                  YEAR    MILES      PRICE  STATUS
@@ -42,7 +42,7 @@
   9 vehicle(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -54,7 +54,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 All Vehicles
+  DEALERDESK v2.4                                 All Vehicles
 ==============================================================
 
   ID    PLATE      MAKE         MODEL                  YEAR    MILES      PRICE  STATUS
@@ -75,7 +75,7 @@
   12 vehicle(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -87,7 +87,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock

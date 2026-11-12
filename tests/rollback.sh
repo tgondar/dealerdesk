@@ -66,6 +66,7 @@ check() {   # check "what must be true" command...
 }
 has()  { grep -q -- "$1" "$2"; }      # has PATTERN FILE
 line() { grep -q -x -F -- "$1" "$2"; } # line EXACT-LINE FILE
+lacks() { ! grep -q -- "$1" "$2"; }       # lacks PATTERN FILE
 
 echo "-- the new version wrote what this check relies on"
 check "Greenway Taxis was saved as fleet"                line "2008|Greenway Taxis|01632 960702|fleet@greenwaytaxis.example|F" data/customers.dat
@@ -73,6 +74,7 @@ check "the fleet invoice was saved"                      [ -n "$fleet_invoice" ]
 
 echo "-- release 2.3 on that data"
 check "it did not crash"                                 [ "$old_status" -eq 0 ]
+check "its screens say v2.3"                             has 'DEALERDESK v2.3' step2.out
 check "it lists all 9 customers"                         has '9 customer(s)' step2.out
 check "it quotes Greenway at full price (no fleet line)" has 'TOTAL  *19429.00' step2.out
 check "it shows the fleet invoice with the right total"  has 'TOTAL  *12901.24' step2.out
@@ -89,6 +91,7 @@ check "both sold vehicles are marked sold"               [ "$(grep -c -E '^100[2
 check "the id counters moved on"                         line "invoice=50235" data/next_ids.dat
 
 echo "-- the new version put back"
+check "its screens no longer say v2.3"                   lacks 'DEALERDESK v2.3' step3.out
 check "it lists all 10 customers"                        has '10 customer(s)' step3.out
 check "Greenway Taxis is fleet again"                    has 'Greenway Taxis .*Fleet' step3.out
 check "Greenway gets the fleet discount again"           has 'TOTAL  *18661.24' step3.out

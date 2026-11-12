@@ -1,6 +1,6 @@
 ### run 1
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -12,7 +12,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -24,7 +24,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Change Price
+  DEALERDESK v2.4                                 Change Price
 ==============================================================
 
   Vehicle ID :   yf20 hbn Vauxhall Corsa 1.2 SE, current price 10995.00
@@ -32,7 +32,7 @@
   Price updated.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Stock
+  DEALERDESK v2.4                                        Stock
 ==============================================================
 
   1. List stock
@@ -44,7 +44,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -56,7 +56,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -66,7 +66,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                               Fleet Customer
+  DEALERDESK v2.4                               Fleet Customer
 ==============================================================
 
   Customer ID :   Greenway Taxis is a retail customer.
@@ -74,7 +74,7 @@
   Customer 2008 is now Fleet.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Customers
+  DEALERDESK v2.4                                    Customers
 ==============================================================
 
   1. List customers
@@ -84,7 +84,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -96,7 +96,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -115,7 +115,7 @@
   TOTAL                        12902.33
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -127,7 +127,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -147,7 +147,7 @@
   TOTAL                        11952.28
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -159,7 +159,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -178,7 +178,7 @@
   TOTAL                        12440.50
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -190,7 +190,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 Sell Vehicle
+  DEALERDESK v2.4                                 Sell Vehicle
 ==============================================================
 
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
@@ -213,7 +213,7 @@
   Invoice 50233 created.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -225,7 +225,7 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -233,7 +233,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                 View Invoice
+  DEALERDESK v2.4                                 View Invoice
 ==============================================================
 
   Invoice no : 
@@ -251,7 +251,7 @@
   TOTAL                        11952.28
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                     Invoices
+  DEALERDESK v2.4                                     Invoices
 ==============================================================
 
   1. List invoices
@@ -259,7 +259,7 @@
   0. Back
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock

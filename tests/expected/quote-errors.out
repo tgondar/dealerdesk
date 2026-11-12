@@ -1,6 +1,6 @@
 ### run 1
 ^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -12,14 +12,14 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  : 
   Vehicle not found.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -31,14 +31,14 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  : 
   Vehicle is already sold.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
@@ -50,14 +50,14 @@
   0. Exit
 
   Option: ^[2J^[H==============================================================
-  DEALERDESK v2.3                                        Quote
+  DEALERDESK v2.4                                        Quote
 ==============================================================
 
   Vehicle ID  :   Customer ID : 
   Customer not found.
 
   Press ENTER to continue...^[2J^[H==============================================================
-  DEALERDESK v2.3                                    Main Menu
+  DEALERDESK v2.4                                    Main Menu
 ==============================================================
 
   1. Stock
