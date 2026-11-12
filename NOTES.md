@@ -26,16 +26,25 @@ I used Claude Code. I made the decisions; it did the reading, writing and runnin
 
 **In the repository:** `CLAUDE.md`, the test scripts and two workflows. The guards are mechanical, not advisory: `make record` refuses to run with uncommitted source, so an agent cannot re-record a baseline to turn a failure green; `make test-mutants` applies 18 deliberate mistakes and fails if the tests miss one.
 
-**Not in the repository:** my own Claude Code configuration, which I share with unrelated projects. From it I used two skills and a review agent from the `agent-skills` plugin: `idea-refine` to analyse before any change, `test-driven-development` for the ticket, and a `code-reviewer` agent that read the feature diff with the ticket and the house rules but none of my conclusions. My standing instructions make the agent log every decision it takes without asking me, and separate what it ran from what it only read.
+**Not in the repository:** my own Claude Code configuration, which I share with unrelated projects. My standing instructions make the agent log every decision it takes without asking me, and separate what it ran from what it only read. From the `agent-skills` plugin I used these commands, in this order:
+
+| Command | Used for |
+|---|---|
+| `/idea-refine` | the analysis before any change |
+| `/test-driven-development` | TICKET-142: failing test first, then the code |
+| `code-reviewer` agent | an independent review of the feature diff, without my conclusions |
+| `/spec-driven-development` | the spec: requirements with ids and success criteria |
+| `/planning-and-task-breakdown` | the plan and the task cards |
+| `/code-review-and-quality` | the review of the last pull request; it found five wrong statements in this file |
+
+The spec, the plan and the task cards are in my own notes, not in the repository.
 
 **The prompts that steered the work** (shortened and tidied, not word for word):
 
 | When | What I asked |
 |---|---|
 | Before anything | "Identify the constraints and what needs solving. I want to understand what works today and what will be added, and to measure the system before and after, with any SLI/SLO I should check. Before any change, let's discuss." |
-| On the ticket | "Open it with their exact text, then add what I decided as a comment, so it is clear these are my assumptions." |
 | Before any code | "Do we have tests? If not, this is mandatory. Then we run the same tests to confirm no behaviour was lost." |
-| For the feature | "/test-driven-development start the fleet discount" |
 | After the release | "You did nothing about speed, even though I asked. How will I know if the new release is slower?" |
 
 ## Where the agent got things wrong
