@@ -16,7 +16,23 @@ all: dealerdesk
 dealerdesk: $(SRC) $(HDR)
 	$(CC) $(CFLAGS) -o $@ $(SRC) -lm
 
+# The same sessions run against a build that stops on memory errors and
+# undefined behaviour.
+build/dealerdesk-asan: $(SRC) $(HDR)
+	mkdir -p build
+	$(CC) $(CFLAGS) -g -fsanitize=address,undefined -fno-sanitize-recover=all -o $@ $(SRC) -lm
+
+test: dealerdesk
+	BIN=./dealerdesk bash tests/run.sh
+
+test-asan: build/dealerdesk-asan
+	BIN=build/dealerdesk-asan bash tests/run.sh
+
+# Rewrites tests/expected. Read CLAUDE.md before using it.
+record: dealerdesk
+	BIN=./dealerdesk bash tests/run.sh record
+
 clean:
 	rm -rf dealerdesk build
 
-.PHONY: all clean
+.PHONY: all test test-asan record clean

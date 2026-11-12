@@ -1,0 +1,566 @@
+### run 1
+^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Sell Vehicle
+==============================================================
+
+  Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
+  INVOICE PREVIEW
+  ----------------------------------------------
+  Customer : Sarah Whitfield (Retail)
+  Vehicle  : yf20 hbn Vauxhall Corsa 1.2 SE
+  ----------------------------------------------
+  List price                   10995.00
+  Discount ( 5.0%)              -549.75
+  Net price                    10445.25
+  Delivery                       150.00
+  VAT 20%                       2119.05
+  Registration fee                55.00
+  ==============================================
+  TOTAL                        12769.30
+
+  Confirm sale (Y/N)? 
+  Invoice 50233 created.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Sell Vehicle
+==============================================================
+
+  Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
+  INVOICE PREVIEW
+  ----------------------------------------------
+  Customer : Marlow Motors Ltd (Trade)
+  Vehicle  : BD68 KWP Volkswagen Golf 1.5 TSI Life
+  ----------------------------------------------
+  List price                   15995.00
+  Trade discount               -1599.50
+  Net price                    14395.50
+  Delivery                       150.00
+  VAT 20%                       2909.10
+  Registration fee                55.00
+  Trade-in                     -1000.00
+  ==============================================
+  TOTAL                        16509.60
+
+  Confirm sale (Y/N)? 
+  Sale cancelled.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Sell Vehicle
+==============================================================
+
+  Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
+  INVOICE PREVIEW
+  ----------------------------------------------
+  Customer : Marlow Motors Ltd (Trade)
+  Vehicle  : BD68 KWP Volkswagen Golf 1.5 TSI Life
+  ----------------------------------------------
+  List price                   15995.00
+  Trade discount               -1599.50
+  Discount (10.0%)             -1439.55
+  Net price                    12955.95
+  Delivery                       150.00
+  VAT 20%                       2621.19
+  Registration fee                55.00
+  Trade-in                     -1000.00
+  ==============================================
+  TOTAL                        14782.14
+
+  Confirm sale (Y/N)? 
+  Invoice 50234 created.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Sell Vehicle
+==============================================================
+
+  Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
+  INVOICE PREVIEW
+  ----------------------------------------------
+  Customer : Greenway Taxis (Retail)
+  Vehicle  : WR21 OLC Toyota Yaris 1.5 Hybrid Icon
+  ----------------------------------------------
+  List price                   16750.00
+  Discount ( 8.0%)             -1340.00
+  Net price                    15410.00
+  Delivery                       150.00
+  VAT 20%                       3112.00
+  Registration fee                55.00
+  ==============================================
+  TOTAL                        18727.00
+
+  Confirm sale (Y/N)? 
+  Invoice 50235 created.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Sell Vehicle
+==============================================================
+
+  Vehicle ID  : 
+  Vehicle is already sold.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Sell Vehicle
+==============================================================
+
+  Vehicle ID  : 
+  Vehicle not found.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  NO     DATE       VEH    CUSTOMER                          TOTAL
+  ----------------------------------------------------------------
+  50230  2021-02-11 1009   David Okafor                    9331.30
+  50231  2021-03-02 1012   Marlow Motors Ltd              14809.60
+  50232  2021-03-29 1001   Greenway Taxis                 11821.48
+  50233  <TODAY> 1002   Sarah Whitfield                12769.30
+  50234  <TODAY> 1003   Marlow Motors Ltd              14782.14
+  50235  <TODAY> 1004   Greenway Taxis                 18727.00
+
+  6 invoice(s)
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 View Invoice
+==============================================================
+
+  Invoice no : 
+  INVOICE 50233    Date: <TODAY>
+  ----------------------------------------------
+  Customer : Sarah Whitfield
+  Vehicle  : yf20 hbn Vauxhall Corsa 1.2 SE
+  ----------------------------------------------
+  List price                   10995.00
+  Discounts                     -549.75
+  Net price                    10445.25
+  Fees                           205.00
+  VAT                           2119.05
+  ==============================================
+  TOTAL                        12769.30
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 View Invoice
+==============================================================
+
+  Invoice no : 
+  INVOICE 50234    Date: <TODAY>
+  ----------------------------------------------
+  Customer : Marlow Motors Ltd
+  Vehicle  : BD68 KWP Volkswagen Golf 1.5 TSI Life
+  ----------------------------------------------
+  List price                   15995.00
+  Discounts                    -3039.05
+  Net price                    12955.95
+  Fees                           205.00
+  VAT                           2621.19
+  Trade-in                     -1000.00
+  ==============================================
+  TOTAL                        14782.14
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 View Invoice
+==============================================================
+
+  Invoice no : 
+  INVOICE 50235    Date: <TODAY>
+  ----------------------------------------------
+  Customer : Greenway Taxis
+  Vehicle  : WR21 OLC Toyota Yaris 1.5 Hybrid Icon
+  ----------------------------------------------
+  List price                   16750.00
+  Discounts                    -1340.00
+  Net price                    15410.00
+  Fees                           205.00
+  VAT                           3112.00
+  ==============================================
+  TOTAL                        18727.00
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                        Stock
+==============================================================
+
+  1. List stock
+  2. List all vehicles (incl. sold)
+  3. Add vehicle
+  4. Find by plate
+  5. Change price
+  6. Reserve / release vehicle
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 All Vehicles
+==============================================================
+
+  ID    PLATE      MAKE         MODEL                  YEAR    MILES      PRICE  STATUS
+  ----------------------------------------------------------------------------------
+  1001  LK19 XRT   Ford         Fiesta 1.0 EcoBoost Ze 2019    38210   10495.00  SOLD
+  1002  yf20 hbn   Vauxhall     Corsa 1.2 SE           2020    21455   10995.00  SOLD
+  1003  BD68 KWP   Volkswagen   Golf 1.5 TSI Life      2018    52300   15995.00  SOLD
+  1004  WR21 OLC   Toyota       Yaris 1.5 Hybrid Icon  2021    14890   16750.00  SOLD
+  1005  ma17 zzt   BMW          320d M Sport           2017    67400   15450.00  IN STOCK
+  1006  SN70 FGE   Nissan       Qashqai 1.3 DIG-T N-Co 2020    29870   18995.00  RESERVED
+  1007  GJ19 VLA   Skoda        Octavia Estate 2.0 TDI 2019    71200   12750.00  IN STOCK
+  1008  KX21 BUY   Kia          Sportage 1.6 GDi 3     2021     9850   25495.00  IN STOCK
+  1009  DE18 PQR   Peugeot      308 1.2 PureTech Allur 2018    44100    9295.00  SOLD
+  1010  hn69 aab   Renault      Clio 1.0 TCe Iconic    2019    33020    9750.00  IN STOCK
+  1011  PO21 MMV   Hyundai      Tucson 1.6 T-GDi SE    2021    18760   22995.00  IN STOCK
+  1012  EF66 TRX   Mercedes-Benz C220d AMG Line         2016    88400   13495.00  SOLD
+
+  12 vehicle(s)
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                        Stock
+==============================================================
+
+  1. List stock
+  2. List all vehicles (incl. sold)
+  3. Add vehicle
+  4. Find by plate
+  5. Change price
+  6. Reserve / release vehicle
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: 
+  Goodbye.
+
+### exit status: 0
+### run 2
+^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  NO     DATE       VEH    CUSTOMER                          TOTAL
+  ----------------------------------------------------------------
+  50230  2021-02-11 1009   David Okafor                    9331.30
+  50231  2021-03-02 1012   Marlow Motors Ltd              14809.60
+  50232  2021-03-29 1001   Greenway Taxis                 11821.48
+  50233  <TODAY> 1002   Sarah Whitfield                12769.30
+  50234  <TODAY> 1003   Marlow Motors Ltd              14782.14
+  50235  <TODAY> 1004   Greenway Taxis                 18727.00
+
+  6 invoice(s)
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 View Invoice
+==============================================================
+
+  Invoice no : 
+  INVOICE 50233    Date: <TODAY>
+  ----------------------------------------------
+  Customer : Sarah Whitfield
+  Vehicle  : yf20 hbn Vauxhall Corsa 1.2 SE
+  ----------------------------------------------
+  List price                   10995.00
+  Discounts                     -549.75
+  Net price                    10445.25
+  Fees                           205.00
+  VAT                           2119.05
+  ==============================================
+  TOTAL                        12769.30
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 View Invoice
+==============================================================
+
+  Invoice no : 
+  INVOICE 50234    Date: <TODAY>
+  ----------------------------------------------
+  Customer : Marlow Motors Ltd
+  Vehicle  : BD68 KWP Volkswagen Golf 1.5 TSI Life
+  ----------------------------------------------
+  List price                   15995.00
+  Discounts                    -3039.05
+  Net price                    12955.95
+  Fees                           205.00
+  VAT                           2621.19
+  Trade-in                     -1000.00
+  ==============================================
+  TOTAL                        14782.14
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 View Invoice
+==============================================================
+
+  Invoice no : 
+  INVOICE 50235    Date: <TODAY>
+  ----------------------------------------------
+  Customer : Greenway Taxis
+  Vehicle  : WR21 OLC Toyota Yaris 1.5 Hybrid Icon
+  ----------------------------------------------
+  List price                   16750.00
+  Discounts                    -1340.00
+  Net price                    15410.00
+  Fees                           205.00
+  VAT                           3112.00
+  ==============================================
+  TOTAL                        18727.00
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                     Invoices
+==============================================================
+
+  1. List invoices
+  2. View invoice
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                        Quote
+==============================================================
+
+  Vehicle ID  : 
+  Vehicle is already sold.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: 
+  Goodbye.
+
+### exit status: 0
+### data/customers.dat
+2001|Sarah Whitfield|07700 900412|s.whitfield@example.com|R
+2002|Marlow Motors Ltd|01632 960118|buying@marlowmotors.example|T
+2003|David Okafor|07700 900877|dokafor@example.net|R
+2004|Hannah Price|07700 900233|hannah.price@example.org|R
+2005|A1 Car Sales|01632 960455|trade@a1cars.example|T
+2006|Tom Brennan|07700 900650|tbrennan@example.com|R
+2007|Priya Nair|07700 900931|priya.nair@example.net|R
+2008|Greenway Taxis|01632 960702|fleet@greenwaytaxis.example|R
+### data/invoices.dat
+50230|2021-02-11|1009|2003|9295.00|464.75|8830.25|1796.05|205.00|1500.00|9331.30
+50231|2021-03-02|1012|2002|13495.00|1349.50|12145.50|2459.10|205.00|0.00|14809.60
+50232|2021-03-29|1001|2008|10495.00|839.60|9655.40|1961.08|205.00|0.00|11821.48
+50233|<TODAY>|1002|2001|10995.00|549.75|10445.25|2119.05|205.00|0.00|12769.30
+50234|<TODAY>|1003|2002|15995.00|3039.05|12955.95|2621.19|205.00|1000.00|14782.14
+50235|<TODAY>|1004|2008|16750.00|1340.00|15410.00|3112.00|205.00|0.00|18727.00
+### data/next_ids.dat
+vehicle=1013
+customer=2009
+invoice=50236
+### data/stock.dat
+1001|LK19 XRT|Ford|Fiesta 1.0 EcoBoost Zetec|2019|38210|7900.00|10495.00|2
+1002|yf20 hbn|Vauxhall|Corsa 1.2 SE|2020|21455|8300.00|10995.00|2
+1003|BD68 KWP|Volkswagen|Golf 1.5 TSI Life|2018|52300|11200.00|15995.00|2
+1004|WR21 OLC|Toyota|Yaris 1.5 Hybrid Icon|2021|14890|13400.00|16750.00|2
+1005|ma17 zzt|BMW|320d M Sport|2017|67400|12100.00|15450.00|0
+1006|SN70 FGE|Nissan|Qashqai 1.3 DIG-T N-Connecta|2020|29870|14900.00|18995.00|1
+1007|GJ19 VLA|Skoda|Octavia Estate 2.0 TDI SE|2019|71200|9800.00|12750.00|0
+1008|KX21 BUY|Kia|Sportage 1.6 GDi 3|2021|9850|21300.00|25495.00|0
+1009|DE18 PQR|Peugeot|308 1.2 PureTech Allure|2018|44100|7100.00|9295.00|2
+1010|hn69 aab|Renault|Clio 1.0 TCe Iconic|2019|33020|7600.00|9750.00|0
+1011|PO21 MMV|Hyundai|Tucson 1.6 T-GDi SE|2021|18760|19100.00|22995.00|0
+1012|EF66 TRX|Mercedes-Benz|C220d AMG Line|2016|88400|10200.00|13495.00|2
+### files in data/: customers.dat invoices.dat next_ids.dat stock.dat 
+### invoice arithmetic: ok
