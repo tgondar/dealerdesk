@@ -26,15 +26,14 @@ I used Claude Code. I made the decisions; it did the reading, writing and runnin
 
 **In the repository:** `CLAUDE.md`, the test scripts and two workflows. The guards are mechanical, not advisory: `make record` refuses to run with uncommitted source, so an agent cannot re-record a baseline to turn a failure green; `make test-mutants` applies 18 deliberate mistakes and fails if the tests miss one.
 
-**Not in the repository:** my own Claude Code configuration, which I share with unrelated projects. My standing instructions make the agent log every decision it takes without asking me, and separate what it ran from what it only read. From the `agent-skills` plugin I used these commands, in this order:
+**Not in the repository:** my own Claude Code configuration, which I share with unrelated projects. My standing instructions make the agent log every decision it takes without asking me, and separate what it ran from what it only read. From the `agent-skills` plugin I used these commands:
 
 | Command | Used for |
 |---|---|
 | `/idea-refine` | the analysis before any change |
-| `/test-driven-development` | TICKET-142: failing test first, then the code |
-| `code-reviewer` agent | an independent review of the feature diff, without my conclusions |
 | `/spec-driven-development` | the spec: requirements with ids and success criteria |
 | `/planning-and-task-breakdown` | the plan and the task cards |
+| `/test-driven-development` | TICKET-142: failing test first, then the code |
 | `/code-review-and-quality` | the review of the last pull request; it found five wrong statements in this file |
 
 The spec, the plan and the task cards are in my own notes, not in the repository.
@@ -49,7 +48,7 @@ The spec, the plan and the task cards are in my own notes, not in the repository
 
 ## Where the agent got things wrong
 
-- **A design that broke the ticket.** It added a second prompt, "Fleet customer (Y/N)?", and had edited the keystroke files to fit. The review agent replayed the original keystrokes: one customer saved instead of two. I chose a single prompt that also accepts `F`; the keystroke files are identical to the originals again.
+- **A design that broke the ticket.** It added a second prompt, "Fleet customer (Y/N)?", and had edited the keystroke files to fit. An independent review agent replayed the original keystrokes: one customer saved instead of two. I chose a single prompt that also accepts `F`; the keystroke files are identical to the originals again.
 - **Tests that could not fail.** Unit tests accepted anything within half a penny, so an unrounded discount passed. The reviewer found it by deleting the rounding and watching everything stay green.
 - **It skipped something I had asked for.** It timed one session once, decided speed did not matter for a terminal program, and moved on. I noticed after the release. Its first speed check then reported 0 ms once: 3 of 350 logged timings were nonsense, most likely the clock being adjusted mid-run under WSL. It now takes the median of seven runs.
 
