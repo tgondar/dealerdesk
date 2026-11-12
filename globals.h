@@ -30,7 +30,7 @@ typedef struct {
     char name[48];
     char phone[20];
     char email[64];
-    char type;          /* R = retail, T = trade */
+    char type;          /* R = retail, T = trade, F = fleet */
 } CUSTOMER;
 
 typedef struct {

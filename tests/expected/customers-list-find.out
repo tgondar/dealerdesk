@@ -18,6 +18,7 @@
   1. List customers
   2. Add customer
   3. Find customer
+  4. Fleet customer on / off
   0. Back
 
   Option: ^[2J^[H==============================================================
@@ -44,6 +45,7 @@
   1. List customers
   2. Add customer
   3. Find customer
+  4. Fleet customer on / off
   0. Back
 
   Option: ^[2J^[H==============================================================
@@ -62,6 +64,7 @@
   1. List customers
   2. Add customer
   3. Find customer
+  4. Fleet customer on / off
   0. Back
 
   Option: ^[2J^[H==============================================================
@@ -79,6 +82,7 @@
   1. List customers
   2. Add customer
   3. Find customer
+  4. Fleet customer on / off
   0. Back
 
   Option: ^[2J^[H==============================================================
@@ -97,6 +101,7 @@
   1. List customers
   2. Add customer
   3. Find customer
+  4. Fleet customer on / off
   0. Back
 
   Option: ^[2J^[H==============================================================
@@ -122,6 +127,7 @@
   1. List customers
   2. Add customer
   3. Find customer
+  4. Fleet customer on / off
   0. Back
 
   Option: ^[2J^[H==============================================================

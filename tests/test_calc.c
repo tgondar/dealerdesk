@@ -23,29 +23,46 @@ typedef struct {
     double net;
     double vat;
     double total;
+    double fleet_disc;
 } CASE;
 
 static const CASE cases[] = {
-    /* name                                 list      type pct  trade-in  trade    pct   disc     net       vat      total */
-    {"invoice 50230: retail, 5%, trade-in",  9295.00, 'R',  5.0, 1500.00,    0.00,  5.0,  464.75,  8830.25, 1796.05,  9331.30},
-    {"invoice 50231: trade",                13495.00, 'T',  0.0,    0.00, 1349.50,  0.0,    0.00, 12145.50, 2459.10, 14809.60},
-    {"invoice 50232: retail, 8%",           10495.00, 'R',  8.0,    0.00,    0.00,  8.0,  839.60,  9655.40, 1961.08, 11821.48},
-    {"retail, no discount",                 10995.00, 'R',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00},
-    {"trade discount is 10%",               10995.00, 'T',  0.0,    0.00, 1099.50,  0.0,    0.00,  9895.50, 2009.10, 12109.60},
-    {"salesman % applies after trade",      10000.00, 'T', 10.0,    0.00, 1000.00, 10.0,  900.00,  8100.00, 1650.00,  9955.00},
-    {"salesman % is capped at 15",          10995.00, 'R', 20.0,    0.00,    0.00, 15.0, 1649.25,  9345.75, 1899.15, 11449.90},
-    {"negative % becomes 0",                10995.00, 'R', -3.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00},
-    {"half a penny rounds up",              10995.00, 'R',  7.5,    0.00,    0.00,  7.5,  824.63, 10170.37, 2064.07, 12439.44},
-    {"fees are never discounted",            1000.00, 'T', 15.0,    0.00,  100.00, 15.0,  135.00,   765.00,  183.00,  1153.00},
-    {"unknown type gets no trade discount", 10995.00, 'X',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00},
-    {"type is case sensitive",              10995.00, 't',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00}
+    /* name                                 list      type pct  trade-in  trade    pct   disc     net       vat      total     fleet */
+    {"invoice 50230: retail, 5%, trade-in",  9295.00, 'R',  5.0, 1500.00,    0.00,  5.0,  464.75,  8830.25, 1796.05,  9331.30,    0.00},
+    {"invoice 50231: trade",                13495.00, 'T',  0.0,    0.00, 1349.50,  0.0,    0.00, 12145.50, 2459.10, 14809.60,    0.00},
+    {"invoice 50232: retail, 8%",           10495.00, 'R',  8.0,    0.00,    0.00,  8.0,  839.60,  9655.40, 1961.08, 11821.48,    0.00},
+    {"retail, no discount",                 10995.00, 'R',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00,    0.00},
+    {"trade discount is 10%",               10995.00, 'T',  0.0,    0.00, 1099.50,  0.0,    0.00,  9895.50, 2009.10, 12109.60,    0.00},
+    {"salesman % applies after trade",      10000.00, 'T', 10.0,    0.00, 1000.00, 10.0,  900.00,  8100.00, 1650.00,  9955.00,    0.00},
+    {"salesman % is capped at 15",          10995.00, 'R', 20.0,    0.00,    0.00, 15.0, 1649.25,  9345.75, 1899.15, 11449.90,    0.00},
+    {"negative % becomes 0",                10995.00, 'R', -3.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00,    0.00},
+    {"half a penny rounds up",              10995.00, 'R',  7.5,    0.00,    0.00,  7.5,  824.63, 10170.37, 2064.07, 12439.44,    0.00},
+    {"fees are never discounted",            1000.00, 'T', 15.0,    0.00,  100.00, 15.0,  135.00,   765.00,  183.00,  1153.00,    0.00},
+    {"unknown type gets no trade discount", 10995.00, 'X',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00,    0.00},
+    {"type is case sensitive",              10995.00, 't',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00,    0.00},
+
+    /* TICKET-142: fleet customers (type F) get 4% off the list price. The
+     * salesman % then applies to what remains, as it does after the trade
+     * discount, and its 15% cap is not used up by the fleet discount.
+     * Figures worked out by hand before the code was written. */
+    {"fleet: 4% off the list price",        10995.00, 'F',  0.0,    0.00,    0.00,  0.0,    0.00, 10555.20, 2141.04, 12901.24,  439.80},
+    {"fleet: salesman % applies after",     10995.00, 'F',  5.0,    0.00,    0.00,  5.0,  527.76, 10027.44, 2035.49, 12267.93,  439.80},
+    {"fleet: salesman cap stays at 15",     10995.00, 'F', 20.0,    0.00,    0.00, 15.0, 1583.28,  8971.92, 1824.38, 11001.30,  439.80},
+    {"fleet: with % and trade-in",          10995.00, 'F',  7.5, 1500.00,    0.00,  7.5,  791.64,  9763.56, 1982.71, 10451.27,  439.80},
+    {"fleet: fees are not discounted",       1000.00, 'F',  0.0,    0.00,    0.00,  0.0,    0.00,   960.00,  222.00,  1387.00,   40.00},
+    {"fleet: discount rounds to the penny", 12345.67, 'F',  0.0,    0.00,    0.00,  0.0,    0.00, 11851.84, 2400.37, 14457.21,  493.83},
+    {"fleet: 4% of 10995.95 rounds up",     10995.95, 'F',  0.0,    0.00,    0.00,  0.0,    0.00, 10556.11, 2141.22, 12902.33,  439.84},
+    {"fleet: odd price with 7.5%",          10995.95, 'F',  7.5,    0.00,    0.00,  7.5,  791.71,  9764.40, 1982.88, 11952.28,  439.84},
+    {"fleet: type is case sensitive",       10995.00, 'f',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00,    0.00}
 };
 
 static int failures = 0;
 
 static void check(const char *name, const char *field, double got, double want)
 {
-    if (fabs(got - want) >= 0.005) {
+    /* Amounts must be whole pennies, so the tolerance is far below one: an
+     * amount that was never rounded (439.838 for 439.84) has to fail. */
+    if (fabs(got - want) > 0.000001) {
         printf("FAIL %s: %s is %.4f, expected %.2f\n", name, field, got, want);
         failures++;
     }
@@ -62,6 +79,7 @@ int main(void)
         calc_quote(&q, c->list, c->type, c->pct, c->tradein);
         check(c->name, "list", q.list, c->list);
         check(c->name, "trade discount", q.trade_disc, c->trade_disc);
+        check(c->name, "fleet discount", q.fleet_disc, c->fleet_disc);
         check(c->name, "discount %", q.disc_pct, c->disc_pct);
         check(c->name, "discount", q.disc, c->disc);
         check(c->name, "net", q.net, c->net);

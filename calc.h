@@ -4,6 +4,7 @@
 typedef struct {
     double list;
     double trade_disc;
+    double fleet_disc;
     double disc_pct;
     double disc;
     double net;

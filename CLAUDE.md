@@ -21,6 +21,7 @@ Pricing, as `calc_quote()` implements it:
 
     list price
     - trade discount        10% for type T customers
+    - fleet discount        4% for type F customers (TICKET-142)
     - salesman discount     % of what remains, capped at 15
     = net price
     + delivery              150.00
@@ -28,6 +29,8 @@ Pricing, as `calc_quote()` implements it:
     + registration fee      55.00
     - trade-in
     = total
+
+A customer has one type letter in `data/customers.dat`: `R` retail, `T` trade, `F` fleet. A customer is never two types at once. Saved invoices store one combined discount amount, with no breakdown (#20).
 
 ## Commands
 
@@ -38,6 +41,7 @@ Run these on Linux, macOS or WSL, from the repository root.
 | `make` | builds `./dealerdesk` with `-std=c89 -pedantic -Wall -Wextra` |
 | `make test` | pricing unit tests, then every recorded session against the baseline |
 | `make test-asan` | the same sessions on a build that stops on memory errors |
+| `make test-rollback` | builds release 2.3 from git history and checks it still reads, and does not damage, data written by the current code |
 | `make record` | rewrites the baseline (see the rules below) |
 | `make clean` | removes build output |
 
@@ -58,9 +62,9 @@ A failing comparison means behaviour changed. That is the test doing its job.
 2. **Never record to make a failure go away.** Use `make record` only to add a session for behaviour that already exists, or when the change in behaviour is the purpose of the work. Commit re-recorded files separately from the code, so a reviewer can read the difference. The script refuses to record while source files differ from the last commit.
 3. **Plain C89.** Declarations at the top of a block, `/* */` comments, no `snprintf`, no `stdint.h`, no `stdbool.h`. Windows releases are built with an old compiler that nobody here can run.
 4. **Do not run `./dealerdesk` in the repository root from a script.** It writes to `data/` at once. The test runner uses a throwaway copy. `git checkout -- data` restores the sample data.
-5. **Data files stay compatible in both directions.** Existing `data/*.dat` files must load without conversion, and a file written by a new version must still load in the previous one, because the rollback procedure is to put the old binary back. Do not insert, reorder or remove fields.
+5. **Data files stay compatible in both directions.** Existing `data/*.dat` files must load without conversion, and a file written by a new version must still load in the previous one, because the rollback procedure is to put the old binary back. Do not insert, reorder or remove fields. A change to what is stored extends `tests/rollback.sh`.
 6. **Known defects stay until someone decides.** The baseline records them on purpose, for example `known-bug-10-empty-field`. If you find a new defect or another place where documentation and code disagree, open an issue. Do not fix it as part of other work.
-7. **Hostile input gets a test.** A change that reads or stores user input extends `tests/sessions/input-hostile.in` (separator characters, over-long input, format specifiers) and must pass `make test-asan`.
+7. **Hostile input gets a test.** A change that reads or stores user input extends `tests/sessions/input-hostile.in` or adds a `*-input-hostile.in` session (separator characters, over-long input, format specifiers) and must pass `make test-asan`.
 8. **Money is exact to the penny.** Round with `rnd2()` at the same points the existing code does.
 9. **Say what you ran.** In commit messages and reports, separate what was observed by running from what was only read in the code.
 10. **One purpose per commit.** Prefix `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf` or `ci`, and reference the issue number.
