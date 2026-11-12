@@ -13,8 +13,10 @@ HDR    = globals.h dbfile.h screen.h calc.h
 
 all: dealerdesk
 
+# LDFLAGS is empty by default. The release build sets it to -static so the
+# binary does not depend on the C library of the machine it is copied to.
 dealerdesk: $(SRC) $(HDR)
-	$(CC) $(CFLAGS) -o $@ $(SRC) -lm
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(SRC) -lm
 
 # The same sessions run against a build that stops on memory errors and
 # undefined behaviour.
