@@ -55,4 +55,4 @@ Posted on the ticket (#21) as questions to the requester:
 5. A reproducible Windows build.
 6. A hook that runs `make test` after every agent edit.
 
-Time: about 4 hours of wall-clock time in one day; the agent was working for roughly half of it.
+Time: about 3.5 hours of wall-clock time in one day, measured from the session transcript; the agent was working for a little over half of it.
