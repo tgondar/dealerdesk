@@ -1,0 +1,275 @@
+### run 1
+^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Add Customer
+==============================================================
+
+  Name   :   Phone  :   Email  :   Trade customer (Y/N)? 
+  Customer 2009 added.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Add Customer
+==============================================================
+
+  Name   :   Phone  :   Email  :   Trade customer (Y/N)? 
+  Customer 2010 added.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Add Customer
+==============================================================
+
+  Name   :   Phone  :   Email  :   Trade customer (Y/N)? 
+  Name is required.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  ID    NAME                       PHONE          EMAIL                        TYPE
+  -----------------------------------------------------------------------------------
+  2001  Sarah Whitfield            07700 900412   s.whitfield@example.com      Retail
+  2002  Marlow Motors Ltd          01632 960118   buying@marlowmotors.example  Trade
+  2003  David Okafor               07700 900877   dokafor@example.net          Retail
+  2004  Hannah Price               07700 900233   hannah.price@example.org     Retail
+  2005  A1 Car Sales               01632 960455   trade@a1cars.example         Trade
+  2006  Tom Brennan                07700 900650   tbrennan@example.com         Retail
+  2007  Priya Nair                 07700 900931   priya.nair@example.net       Retail
+  2008  Greenway Taxis             01632 960702   fleet@greenwaytaxis.example  Retail
+  2009  Northside Rentals          01632 960999   hire@northside.example       Retail
+  2010  Bodyshop Trade Ltd         01632 960111   parts@bodyshop.example       Trade
+
+  10 customer(s)
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: 
+  Goodbye.
+
+### exit status: 0
+### run 2
+^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  ID    NAME                       PHONE          EMAIL                        TYPE
+  -----------------------------------------------------------------------------------
+  2001  Sarah Whitfield            07700 900412   s.whitfield@example.com      Retail
+  2002  Marlow Motors Ltd          01632 960118   buying@marlowmotors.example  Trade
+  2003  David Okafor               07700 900877   dokafor@example.net          Retail
+  2004  Hannah Price               07700 900233   hannah.price@example.org     Retail
+  2005  A1 Car Sales               01632 960455   trade@a1cars.example         Trade
+  2006  Tom Brennan                07700 900650   tbrennan@example.com         Retail
+  2007  Priya Nair                 07700 900931   priya.nair@example.net       Retail
+  2008  Greenway Taxis             01632 960702   fleet@greenwaytaxis.example  Retail
+  2009  Northside Rentals          01632 960999   hire@northside.example       Retail
+  2010  Bodyshop Trade Ltd         01632 960111   parts@bodyshop.example       Trade
+
+  10 customer(s)
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                        Quote
+==============================================================
+
+  Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
+  QUOTATION (valid 7 days)
+  ----------------------------------------------
+  Customer : Northside Rentals (Retail)
+  Vehicle  : yf20 hbn Vauxhall Corsa 1.2 SE
+  ----------------------------------------------
+  List price                   10995.00
+  Net price                    10995.00
+  Delivery                       150.00
+  VAT 20%                       2229.00
+  Registration fee                55.00
+  ==============================================
+  TOTAL                        13429.00
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                        Quote
+==============================================================
+
+  Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
+  QUOTATION (valid 7 days)
+  ----------------------------------------------
+  Customer : Bodyshop Trade Ltd (Trade)
+  Vehicle  : yf20 hbn Vauxhall Corsa 1.2 SE
+  ----------------------------------------------
+  List price                   10995.00
+  Trade discount               -1099.50
+  Net price                     9895.50
+  Delivery                       150.00
+  VAT 20%                       2009.10
+  Registration fee                55.00
+  ==============================================
+  TOTAL                        12109.60
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: 
+  Goodbye.
+
+### exit status: 0
+### data/customers.dat
+2001|Sarah Whitfield|07700 900412|s.whitfield@example.com|R
+2002|Marlow Motors Ltd|01632 960118|buying@marlowmotors.example|T
+2003|David Okafor|07700 900877|dokafor@example.net|R
+2004|Hannah Price|07700 900233|hannah.price@example.org|R
+2005|A1 Car Sales|01632 960455|trade@a1cars.example|T
+2006|Tom Brennan|07700 900650|tbrennan@example.com|R
+2007|Priya Nair|07700 900931|priya.nair@example.net|R
+2008|Greenway Taxis|01632 960702|fleet@greenwaytaxis.example|R
+2009|Northside Rentals|01632 960999|hire@northside.example|R
+2010|Bodyshop Trade Ltd|01632 960111|parts@bodyshop.example|T
+### data/invoices.dat
+50230|2021-02-11|1009|2003|9295.00|464.75|8830.25|1796.05|205.00|1500.00|9331.30
+50231|2021-03-02|1012|2002|13495.00|1349.50|12145.50|2459.10|205.00|0.00|14809.60
+50232|2021-03-29|1001|2008|10495.00|839.60|9655.40|1961.08|205.00|0.00|11821.48
+### data/next_ids.dat
+vehicle=1013
+customer=2011
+invoice=50233
+### data/stock.dat
+1001|LK19 XRT|Ford|Fiesta 1.0 EcoBoost Zetec|2019|38210|7900.00|10495.00|2
+1002|yf20 hbn|Vauxhall|Corsa 1.2 SE|2020|21455|8300.00|10995.00|0
+1003|BD68 KWP|Volkswagen|Golf 1.5 TSI Life|2018|52300|11200.00|15995.00|0
+1004|WR21 OLC|Toyota|Yaris 1.5 Hybrid Icon|2021|14890|13400.00|16750.00|0
+1005|ma17 zzt|BMW|320d M Sport|2017|67400|12100.00|15450.00|0
+1006|SN70 FGE|Nissan|Qashqai 1.3 DIG-T N-Connecta|2020|29870|14900.00|18995.00|1
+1007|GJ19 VLA|Skoda|Octavia Estate 2.0 TDI SE|2019|71200|9800.00|12750.00|0
+1008|KX21 BUY|Kia|Sportage 1.6 GDi 3|2021|9850|21300.00|25495.00|0
+1009|DE18 PQR|Peugeot|308 1.2 PureTech Allure|2018|44100|7100.00|9295.00|2
+1010|hn69 aab|Renault|Clio 1.0 TCe Iconic|2019|33020|7600.00|9750.00|0
+1011|PO21 MMV|Hyundai|Tucson 1.6 T-GDi SE|2021|18760|19100.00|22995.00|0
+1012|EF66 TRX|Mercedes-Benz|C220d AMG Line|2016|88400|10200.00|13495.00|2
+### files in data/: customers.dat invoices.dat next_ids.dat stock.dat 
+### invoice arithmetic: ok
