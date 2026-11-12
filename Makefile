@@ -22,7 +22,12 @@ build/dealerdesk-asan: $(SRC) $(HDR)
 	mkdir -p build
 	$(CC) $(CFLAGS) -g -fsanitize=address,undefined -fno-sanitize-recover=all -o $@ $(SRC) -lm
 
-test: dealerdesk
+build/test_calc: tests/test_calc.c calc.c calc.h
+	mkdir -p build
+	$(CC) $(CFLAGS) -I. -o $@ tests/test_calc.c calc.c -lm
+
+test: dealerdesk build/test_calc
+	build/test_calc
 	BIN=./dealerdesk bash tests/run.sh
 
 test-asan: build/dealerdesk-asan
