@@ -95,8 +95,42 @@
   DEALERDESK v2.3                                 Add Customer
 ==============================================================
 
-  Name   :   Phone  :   Email  :   Trade customer (Y/N)?   Fleet customer (Y/N)? 
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2009 added.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  4. Fleet customer on / off
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Add Customer
+==============================================================
+
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
+  Customer 2010 added.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  4. Fleet customer on / off
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Add Customer
+==============================================================
+
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
+  Customer 2011 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Customers
@@ -123,8 +157,10 @@
   2007  Priya Nair                 07700 900931   priya.nair@example.net       Retail
   2008  Greenway Taxis             01632 960702   fleet@greenwaytaxis.example  Retail
   2009  %n%s/Fleet                 x              y                            Fleet
+  2010  Three Hundred Fs           x              y                            Fleet
+  2011  Not A Type                 x              y                            Retail
 
-  9 customer(s)
+  11 customer(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Customers
@@ -190,8 +226,10 @@
   2007  Priya Nair                 07700 900931   priya.nair@example.net       Retail
   2008  Greenway Taxis             01632 960702   fleet@greenwaytaxis.example  Retail
   2009  %n%s/Fleet                 x              y                            Fleet
+  2010  Three Hundred Fs           x              y                            Fleet
+  2011  Not A Type                 x              y                            Retail
 
-  9 customer(s)
+  11 customer(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Customers
@@ -229,13 +267,15 @@
 2007|Priya Nair|07700 900931|priya.nair@example.net|R
 2008|Greenway Taxis|01632 960702|fleet@greenwaytaxis.example|R
 2009|%n%s/Fleet|x|y|F
+2010|Three Hundred Fs|x|y|F
+2011|Not A Type|x|y|R
 ### data/invoices.dat
 50230|2021-02-11|1009|2003|9295.00|464.75|8830.25|1796.05|205.00|1500.00|9331.30
 50231|2021-03-02|1012|2002|13495.00|1349.50|12145.50|2459.10|205.00|0.00|14809.60
 50232|2021-03-29|1001|2008|10495.00|839.60|9655.40|1961.08|205.00|0.00|11821.48
 ### data/next_ids.dat
 vehicle=1013
-customer=2010
+customer=2012
 invoice=50233
 ### data/stock.dat
 1001|LK19 XRT|Ford|Fiesta 1.0 EcoBoost Zetec|2019|38210|7900.00|10495.00|2

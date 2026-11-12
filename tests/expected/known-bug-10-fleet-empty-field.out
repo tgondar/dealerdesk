@@ -25,7 +25,7 @@
   DEALERDESK v2.3                                 Add Customer
 ==============================================================
 
-  Name   :   Phone  :   Email  :   Trade customer (Y/N)?   Fleet customer (Y/N)? 
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2009 added.
 
   Press ENTER to continue...^[2J^[H==============================================================

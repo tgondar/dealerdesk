@@ -25,7 +25,7 @@
   DEALERDESK v2.3                                 Add Customer
 ==============================================================
 
-  Name   :   Phone  :   Email  :   Trade customer (Y/N)?   Fleet customer (Y/N)? 
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2009 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
@@ -42,7 +42,7 @@
   DEALERDESK v2.3                                 Add Customer
 ==============================================================
 
-  Name   :   Phone  :   Email  :   Trade customer (Y/N)?   Fleet customer (Y/N)? 
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2010 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
@@ -59,7 +59,7 @@
   DEALERDESK v2.3                                 Add Customer
 ==============================================================
 
-  Name   :   Phone  :   Email  :   Trade customer (Y/N)? 
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2011 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
@@ -76,8 +76,25 @@
   DEALERDESK v2.3                                 Add Customer
 ==============================================================
 
-  Name   :   Phone  :   Email  :   Trade customer (Y/N)?   Fleet customer (Y/N)? 
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
   Customer 2012 added.
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Customers
+==============================================================
+
+  1. List customers
+  2. Add customer
+  3. Find customer
+  4. Fleet customer on / off
+  0. Back
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                 Add Customer
+==============================================================
+
+  Name   :   Phone  :   Email  :   Trade customer (Y/N, or F for fleet)? 
+  Customer 2013 added.
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Customers
@@ -106,9 +123,10 @@
   2009  Northside Rentals          01632 960999   hire@northside.example       Fleet
   2010  Plain Retail               07700 900001   plain@example.com            Retail
   2011  Bodyshop Trade Ltd         01632 960111   parts@bodyshop.example       Trade
-  2012  Enter Means No             07700 900002   enter@example.com            Retail
+  2012  Enter Means Retail         07700 900002   enter@example.com            Retail
+  2013  Lower Case Fleet           07700 900003   lower@example.com            Fleet
 
-  12 customer(s)
+  13 customer(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Customers
@@ -176,9 +194,10 @@
   2009  Northside Rentals          01632 960999   hire@northside.example       Fleet
   2010  Plain Retail               07700 900001   plain@example.com            Retail
   2011  Bodyshop Trade Ltd         01632 960111   parts@bodyshop.example       Trade
-  2012  Enter Means No             07700 900002   enter@example.com            Retail
+  2012  Enter Means Retail         07700 900002   enter@example.com            Retail
+  2013  Lower Case Fleet           07700 900003   lower@example.com            Fleet
 
-  12 customer(s)
+  13 customer(s)
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Customers
@@ -301,7 +320,7 @@
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
   QUOTATION (valid 7 days)
   ----------------------------------------------
-  Customer : Enter Means No (Retail)
+  Customer : Enter Means Retail (Retail)
   Vehicle  : BD68 KWP Volkswagen Golf 1.5 TSI Life
   ----------------------------------------------
   List price                   15995.00
@@ -311,6 +330,37 @@
   Registration fee                55.00
   ==============================================
   TOTAL                        19429.00
+
+  Press ENTER to continue...^[2J^[H==============================================================
+  DEALERDESK v2.3                                    Main Menu
+==============================================================
+
+  1. Stock
+  2. Customers
+  3. Quote
+  4. Sell vehicle
+  5. Invoices
+  9. Help
+  0. Exit
+
+  Option: ^[2J^[H==============================================================
+  DEALERDESK v2.3                                        Quote
+==============================================================
+
+  Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
+  QUOTATION (valid 7 days)
+  ----------------------------------------------
+  Customer : Lower Case Fleet (Fleet)
+  Vehicle  : BD68 KWP Volkswagen Golf 1.5 TSI Life
+  ----------------------------------------------
+  List price                   15995.00
+  Fleet discount                -639.80
+  Net price                    15355.20
+  Delivery                       150.00
+  VAT 20%                       3101.04
+  Registration fee                55.00
+  ==============================================
+  TOTAL                        18661.24
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Main Menu
@@ -340,14 +390,15 @@
 2009|Northside Rentals|01632 960999|hire@northside.example|F
 2010|Plain Retail|07700 900001|plain@example.com|R
 2011|Bodyshop Trade Ltd|01632 960111|parts@bodyshop.example|T
-2012|Enter Means No|07700 900002|enter@example.com|R
+2012|Enter Means Retail|07700 900002|enter@example.com|R
+2013|Lower Case Fleet|07700 900003|lower@example.com|F
 ### data/invoices.dat
 50230|2021-02-11|1009|2003|9295.00|464.75|8830.25|1796.05|205.00|1500.00|9331.30
 50231|2021-03-02|1012|2002|13495.00|1349.50|12145.50|2459.10|205.00|0.00|14809.60
 50232|2021-03-29|1001|2008|10495.00|839.60|9655.40|1961.08|205.00|0.00|11821.48
 ### data/next_ids.dat
 vehicle=1013
-customer=2013
+customer=2014
 invoice=50233
 ### data/stock.dat
 1001|LK19 XRT|Ford|Fiesta 1.0 EcoBoost Zetec|2019|38210|7900.00|10495.00|2
