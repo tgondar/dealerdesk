@@ -70,6 +70,7 @@
   1. List customers
   2. Add customer
   3. Find customer
+  4. Fleet customer on / off
   0. Back
 
   Option:   Invalid option
@@ -81,6 +82,7 @@
   1. List customers
   2. Add customer
   3. Find customer
+  4. Fleet customer on / off
   0. Back
 
   Option: ^[2J^[H==============================================================
@@ -133,6 +135,7 @@
 
   - Plates are converted to upper case automatically.
   - Trade customers receive a 5% trade discount.
+  - Fleet customers receive a 4% fleet discount.
   - Salesman discounts above 10% require a manager PIN.
   - Quotes are valid for 7 days.
   - A sold vehicle cannot be reserved or sold again.
