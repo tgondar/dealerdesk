@@ -39,6 +39,10 @@ test-asan: build/dealerdesk-asan
 test-rollback: dealerdesk
 	BIN=./dealerdesk bash tests/rollback.sh
 
+# Applies deliberate mistakes one at a time; the tests must catch each one.
+test-mutants:
+	bash tests/mutants.sh
+
 # Rewrites tests/expected. Read CLAUDE.md before using it.
 record: dealerdesk
 	BIN=./dealerdesk bash tests/run.sh record
@@ -46,4 +50,4 @@ record: dealerdesk
 clean:
 	rm -rf dealerdesk build
 
-.PHONY: all test test-asan test-rollback record clean
+.PHONY: all test test-asan test-rollback test-mutants record clean

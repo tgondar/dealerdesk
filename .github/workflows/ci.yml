@@ -32,6 +32,9 @@ jobs:
       - name: Data survives a rollback to release 2.3
         run: make test-rollback
 
+      - name: Deliberate mistakes in the code are caught by the tests
+        run: make test-mutants
+
       - name: README Quick Start build behaves the same
         run: |
           gcc -o /tmp/dealerdesk-quickstart *.c -lm
