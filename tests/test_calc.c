@@ -51,6 +51,8 @@ static const CASE cases[] = {
     {"fleet: with % and trade-in",          10995.00, 'F',  7.5, 1500.00,    0.00,  7.5,  791.64,  9763.56, 1982.71, 10451.27,  439.80},
     {"fleet: fees are not discounted",       1000.00, 'F',  0.0,    0.00,    0.00,  0.0,    0.00,   960.00,  222.00,  1387.00,   40.00},
     {"fleet: discount rounds to the penny", 12345.67, 'F',  0.0,    0.00,    0.00,  0.0,    0.00, 11851.84, 2400.37, 14457.21,  493.83},
+    {"fleet: 4% of 10995.95 rounds up",     10995.95, 'F',  0.0,    0.00,    0.00,  0.0,    0.00, 10556.11, 2141.22, 12902.33,  439.84},
+    {"fleet: odd price with 7.5%",          10995.95, 'F',  7.5,    0.00,    0.00,  7.5,  791.71,  9764.40, 1982.88, 11952.28,  439.84},
     {"fleet: type is case sensitive",       10995.00, 'f',  0.0,    0.00,    0.00,  0.0,    0.00, 10995.00, 2229.00, 13429.00,    0.00}
 };
 
@@ -58,7 +60,9 @@ static int failures = 0;
 
 static void check(const char *name, const char *field, double got, double want)
 {
-    if (fabs(got - want) >= 0.005) {
+    /* Amounts must be whole pennies, so the tolerance is far below one: an
+     * amount that was never rounded (439.838 for 439.84) has to fail. */
+    if (fabs(got - want) > 0.000001) {
         printf("FAIL %s: %s is %.4f, expected %.2f\n", name, field, got, want);
         failures++;
     }
