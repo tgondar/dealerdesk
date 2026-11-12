@@ -40,7 +40,7 @@ keys() { printf '%s\n' "$@"; }
 
 # 1. new version
 keys 2 4 2008 y '' \
-     2 'Northside Rentals' '01632 960999' 'hire@northside.example' n y '' 0 \
+     2 'Northside Rentals' '01632 960999' 'hire@northside.example' F '' 0 \
      4 1002 2008 0 0 y '' 0 | "$NEW" > step1.out 2>&1
 fleet_invoice=$(grep '^50233|' data/invoices.dat)
 

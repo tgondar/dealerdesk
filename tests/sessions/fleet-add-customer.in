@@ -3,14 +3,12 @@
 Northside Rentals
 01632 960999
 hire@northside.example
-n
-y
+F
 
 2
 Plain Retail
 07700 900001
 plain@example.com
-n
 n
 
 2
@@ -20,11 +18,16 @@ parts@bodyshop.example
 y
 
 2
-Enter Means No
+Enter Means Retail
 07700 900002
 enter@example.com
-n
 
+
+2
+Lower Case Fleet
+07700 900003
+lower@example.com
+f
 
 1
 
@@ -56,6 +59,12 @@ n
 3
 1003
 2012
+0
+0
+
+3
+1003
+2013
 0
 0
 
