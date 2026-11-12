@@ -91,7 +91,7 @@
   2006  Tom Brennan                07700 900650   tbrennan@example.com         Retail
   2007  Priya Nair                 07700 900931   priya.nair@example.net       Retail
   2008  Greenway Taxis             01632 960702   fleet@greenwaytaxis.example  Retail
-  2009  Empty Phone Ltd            ep@example.com T                            Retail
+  2009  No Email Fleet Ltd         01632 960333                                Fleet
 
   9 customer(s)
 
@@ -124,16 +124,17 @@
   Vehicle ID  :   Customer ID :   Discount %  :   Trade-in    : 
   QUOTATION (valid 7 days)
   ----------------------------------------------
-  Customer : Empty Phone Ltd (Retail)
+  Customer : No Email Fleet Ltd (Fleet)
   Vehicle  : yf20 hbn Vauxhall Corsa 1.2 SE
   ----------------------------------------------
   List price                   10995.00
-  Net price                    10995.00
+  Fleet discount                -439.80
+  Net price                    10555.20
   Delivery                       150.00
-  VAT 20%                       2229.00
+  VAT 20%                       2141.04
   Registration fee                55.00
   ==============================================
-  TOTAL                        13429.00
+  TOTAL                        12901.24
 
   Press ENTER to continue...^[2J^[H==============================================================
   DEALERDESK v2.3                                    Main Menu
@@ -160,7 +161,7 @@
 2006|Tom Brennan|07700 900650|tbrennan@example.com|R
 2007|Priya Nair|07700 900931|priya.nair@example.net|R
 2008|Greenway Taxis|01632 960702|fleet@greenwaytaxis.example|R
-2009|Empty Phone Ltd||ep@example.com|T
+2009|No Email Fleet Ltd|01632 960333||F
 ### data/invoices.dat
 50230|2021-02-11|1009|2003|9295.00|464.75|8830.25|1796.05|205.00|1500.00|9331.30
 50231|2021-03-02|1012|2002|13495.00|1349.50|12145.50|2459.10|205.00|0.00|14809.60
