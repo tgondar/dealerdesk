@@ -32,6 +32,9 @@ jobs:
       - name: Data survives a rollback to release 2.3
         run: make test-rollback
 
+      - name: Not slower than release 2.3 with the data files nearly full
+        run: make test-speed
+
       - name: Deliberate mistakes in the code are caught by the tests
         run: make test-mutants
 

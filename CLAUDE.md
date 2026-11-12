@@ -39,6 +39,7 @@ Run these on Linux, macOS or WSL, from the repository root.
 | `make test` | pricing unit tests, then every recorded session against the baseline |
 | `make test-asan` | the same sessions on a build that stops on memory errors |
 | `make test-rollback` | builds release 2.3 from git history and checks it still reads, and does not damage, data written by the current code |
+| `make test-speed` | times the current build against release 2.3 with the data files nearly full; fails if a workload takes more than twice as long |
 | `make test-mutants` | applies 18 deliberate mistakes one at a time and checks that `make test` fails for each |
 | `make record` | rewrites the baseline (see the rules below) |
 | `make clean` | removes build output |

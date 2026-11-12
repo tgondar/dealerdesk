@@ -39,6 +39,10 @@ test-asan: build/dealerdesk-asan
 test-rollback: dealerdesk
 	BIN=./dealerdesk bash tests/rollback.sh
 
+# Times this version against release 2.3 with the data files nearly full.
+test-speed: dealerdesk
+	BIN=./dealerdesk bash tests/speed.sh
+
 # Applies deliberate mistakes one at a time; the tests must catch each one.
 test-mutants:
 	bash tests/mutants.sh
@@ -50,4 +54,4 @@ record: dealerdesk
 clean:
 	rm -rf dealerdesk build
 
-.PHONY: all test test-asan test-rollback test-mutants record clean
+.PHONY: all test test-asan test-rollback test-speed test-mutants record clean

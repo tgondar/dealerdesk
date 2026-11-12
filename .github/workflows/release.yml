@@ -35,6 +35,9 @@ jobs:
       - name: Data survives a rollback to release 2.3, on the release binary
         run: make test-rollback
 
+      - name: Not slower than release 2.3, on the release binary
+        run: make test-speed
+
       - name: Recorded sessions under ASan and UBSan
         run: make test-asan
 
