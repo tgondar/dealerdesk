@@ -39,6 +39,7 @@ Run these on Linux, macOS or WSL, from the repository root.
 | `make test` | pricing unit tests, then every recorded session against the baseline |
 | `make test-asan` | the same sessions on a build that stops on memory errors |
 | `make test-rollback` | builds release 2.3 from git history and checks it still reads, and does not damage, data written by the current code |
+| `make test-mutants` | applies 18 deliberate mistakes one at a time and checks that `make test` fails for each |
 | `make record` | rewrites the baseline (see the rules below) |
 | `make clean` | removes build output |
 
@@ -56,6 +57,8 @@ The README Quick Start command, `gcc -o dealerdesk *.c -lm`, must keep working. 
 - `tests/test_calc.c` checks `calc_quote()` directly. Its first three cases are the real invoices.
 
 A failing comparison means behaviour changed. That is the test doing its job.
+
+`tests/mutants.sh` checks the tests themselves. When you add a rule to the code, add the mistake someone could make with it to that list, and see it caught.
 
 ## Rules
 
