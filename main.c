@@ -2,8 +2,8 @@
  * DEALERDESK - showroom dealer management
  * main.c - menus and screens
  *
- * NOTE: plates are always stored in upper case with no spaces
- *       (normalised when the vehicle is added) so lookups are simple.
+ * NOTE: plates are stored exactly as typed, so Find by plate is an
+ *       exact match on capital letters and spaces.
  */
 #include <stdio.h>
 #include <stdlib.h>

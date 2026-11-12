@@ -3,12 +3,12 @@
  *
  * Price build-up:
  *     list price
- *   - trade discount       (trade customers get 5%)
+ *   - trade discount       (trade customers get 10%)
  *   - fleet discount       (fleet customers get 4%, TICKET-142)
- *   - salesman discount    (max 10% without manager PIN)
+ *   - salesman discount    (% of what is left; capped at 15, no manager PIN)
  *   = net price
  *   + delivery
- *   + VAT 20% on list price
+ *   + VAT 20% on net price + delivery
  *   + registration fee
  *   - trade-in
  *   = total

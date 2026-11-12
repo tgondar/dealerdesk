@@ -2,20 +2,17 @@
 
 DealerDesk is a menu-driven terminal program in C. Car dealerships use it every day for stock, customers, quotes and invoices, and it has been in production for years. Staff must not notice any change except a feature that a ticket asks for.
 
-## The program is right, the documentation is wrong
+## The program is right, the Help screen is not
 
-`README.md`, `RELEASE.txt`, the Help screen and several code comments describe an older program. When they disagree with the code, the code and the invoices in `data/invoices.dat` are right. Never change behaviour to match the documentation.
+The README and the code comments were corrected for release 2.4 and now describe what the program does. The Help screen inside the program was left alone, because staff would see it change. It is still wrong on three points. Never change behaviour to match it.
 
-| Topic | Documentation says | The program does | Issue |
+| Topic | Help screen says | The program does | Issue |
 |---|---|---|---|
 | Trade discount | 5% | 10% | #5 |
-| Salesman discount | 10% maximum, manager PIN above | capped at 15% without a message, no PIN | #6 |
-| VAT | on list price; delivery exempt | 20% of (net price + delivery) | #7 |
-| Plates | upper-cased when added | stored as typed | #8 |
-| Build | `main.c dbfile.c screen.c report.c` | `report.c` does not exist | #2 |
-| Data folder | `C:\DEALERDESK\DATA` | `./data`, relative to where it is started | #3 |
-| Menu | has "6. Reports" | removed | #4 |
-| Version | README says 2.1 | `DD_VERSION` in `screen.h`, printed on every screen | #1 |
+| Salesman discount | above 10% needs a manager PIN | capped at 15% without a message, no PIN | #6 |
+| Plates | converted to upper case automatically | stored as typed | #8 |
+
+When any document and the code disagree, the code and the invoices in `data/invoices.dat` are right. Before 2.4 the README was wrong in eight places, and following it would have changed prices. `tests/test_calc.c` holds the rules.
 
 Pricing, as `calc_quote()` implements it:
 

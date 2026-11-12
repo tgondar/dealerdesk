@@ -1,7 +1,7 @@
 /*
  * dbfile.c - flat file storage
  *
- * Files live in C:\DEALERDESK\DATA
+ * Files live in ./data, relative to where the program is started
  * One record per line, fields separated by |
  */
 #include <stdio.h>
