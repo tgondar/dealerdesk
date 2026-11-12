@@ -51,7 +51,7 @@ The README Quick Start command, `gcc -o dealerdesk *.c -lm`, must keep working. 
 
 - `tests/sessions/NAME.in` is what a user types, one line per ENTER. A line with only `@restart` closes the program and starts it again on the same data.
 - `tests/expected/NAME.out` is what the program printed and the data files it left behind, recorded from the code as Nextlane delivered it.
-- `tests/fixtures/data` is the frozen sample data every session starts from. Do not edit it.
+- `tests/fixtures/data` is the frozen sample data every session starts from. Do not edit it. A session that needs other data brings its own files in `tests/sessions/NAME.data/`.
 - `tests/test_calc.c` checks `calc_quote()` directly. Its first three cases are the real invoices.
 
 A failing comparison means behaviour changed. That is the test doing its job.
@@ -63,7 +63,7 @@ A failing comparison means behaviour changed. That is the test doing its job.
 3. **Plain C89.** Declarations at the top of a block, `/* */` comments, no `snprintf`, no `stdint.h`, no `stdbool.h`. Windows releases are built with an old compiler that nobody here can run.
 4. **Do not run `./dealerdesk` in the repository root from a script.** It writes to `data/` at once. The test runner uses a throwaway copy. `git checkout -- data` restores the sample data.
 5. **Data files stay compatible in both directions.** Existing `data/*.dat` files must load without conversion, and a file written by a new version must still load in the previous one, because the rollback procedure is to put the old binary back. Do not insert, reorder or remove fields. A change to what is stored extends `tests/rollback.sh`.
-6. **Known defects stay until someone decides.** The baseline records them on purpose, for example `known-bug-10-empty-field`. If you find a new defect or another place where documentation and code disagree, open an issue. Do not fix it as part of other work.
+6. **Known defects stay until someone decides.** The baseline records them on purpose, for example the negative totals in `quote-retail` (#11). If you find a new defect or another place where documentation and code disagree, open an issue. Do not fix it as part of other work.
 7. **Hostile input gets a test.** A change that reads or stores user input extends `tests/sessions/input-hostile.in` or adds a `*-input-hostile.in` session (separator characters, over-long input, format specifiers) and must pass `make test-asan`.
 8. **Money is exact to the penny.** Round with `rnd2()` at the same points the existing code does.
 9. **Say what you ran.** In commit messages and reports, separate what was observed by running from what was only read in the code.
