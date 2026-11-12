@@ -1,0 +1,33 @@
+name: CI
+
+# Every push to every branch. A pull request shows these results too, because
+# they attach to the commit.
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: build and test (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build, warnings are errors
+        run: make CFLAGS="-std=c89 -pedantic -Wall -Wextra -Werror"
+
+      - name: Pricing unit tests and recorded sessions
+        run: make test
+
+      - name: Recorded sessions under ASan and UBSan
+        run: make test-asan
+
+      - name: README Quick Start build behaves the same
+        run: |
+          gcc -o /tmp/dealerdesk-quickstart *.c -lm
+          BIN=/tmp/dealerdesk-quickstart bash tests/run.sh
